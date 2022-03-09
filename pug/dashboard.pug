@@ -1,0 +1,128 @@
+//-//- Use Master Template Base
+extends master/base.pug
+
+
+//-//- Page Title
+block title
+	title Dashboard : CENTRY
+
+
+//-//- Custom Meta
+block custom-meta
+	meta(name="description", content="Dashboard : CENTRY PDPA Backend")
+
+
+//-//- Custom Style
+block custom-style
+
+
+//-//- Body
+block body
+	- var bodyClass= 'dashboard'; // body class
+	include master/bodyclass.pug
+
+
+	//-//- Include sidenav
+	include master/sidenav.pug
+
+
+	// Main content
+	main#panel.main-content
+
+
+		//-//- Include topbar
+		include master/topbar.pug
+
+
+		// Breadcrumb
+		.header.bg-gray-1.pb-6
+			.container-fluid
+				.header-body
+
+					.row.align-items-center.py-4
+						.col-lg-12
+
+							//- h2.h2.text-secondary.d-inline-block.mb-0 Dashboard
+
+							nav.d-none.d-md-inline-block(aria-label="breadcrumb")
+								ol.breadcrumb.breadcrumb-links.breadcrumb-light
+									li.breadcrumb-item
+										a(href="dashboard.html", title="กลับไปหน้า Dashboard"): i.fad.fa-home-lg-alt
+									li.breadcrumb-item.active(aria-current="page") Dashboard
+
+
+		// Content area
+		.container-fluid.mt--6
+			|
+			|
+			|
+			|
+
+			// ========================= Page content ===============================
+
+			.row
+				.col-xl-3.col-md-6
+					.card.card-stats
+						a(href="#", title="Service 1")
+							.card-body
+								.row
+									.col
+										h4.text-muted.mb-0 Service 1
+										span.h3.font-weight-bold.mb-0 839 records
+									.col-auto
+										.icon.icon-shape.rounded-circle.shadow
+											img.w-100(alt="Service 1", src="../../uploads/angular.jpg")
+								p.mt-3.mb-0.text-sm
+									span.text-nowrap domain.com
+
+				.col-xl-3.col-md-6
+					.card.card-stats
+						a(href="#", title="Service 2")
+							.card-body
+								.row
+									.col
+										h4.text-muted.mb-0 Service 2
+										span.h3.font-weight-bold.mb-0 435,657 records
+									.col-auto
+										.icon.icon-shape.rounded-circle.shadow
+											img.w-100(alt="Service 2", src="../../uploads/vue.jpg")
+								p.mt-3.mb-0.text-sm
+									span.text-nowrap theurlofservice.com
+
+				.col-xl-3.col-md-6
+					.card.card-stats
+						a(href="#", title="Service 3")
+							.card-body
+								.row
+									.col
+										h4.text-muted.mb-0 Service 3
+										span.h3.font-weight-bold.mb-0 85,443,890 records
+									.col-auto
+										.icon.icon-shape.rounded-circle.shadow
+											img.w-100(alt="Service 3", src="../../uploads/react.jpg")
+								p.mt-3.mb-0.text-sm
+									span.text-nowrap url.com
+
+			// ======================== End Page content =============================
+
+			|
+			|
+			|
+			|
+			//-//- Include footer
+			include master/footer.pug
+
+
+	// Main Script
+	block script
+		include script/master-script.js
+
+
+	// Custom Script
+	block custom-script
+		|
+		//- <script src="../../assets/js/custom.js?v=1.0.0"></script>
+
+	|
+	|
+	</body>
