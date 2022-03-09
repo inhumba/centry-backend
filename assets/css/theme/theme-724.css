@@ -1,0 +1,9 @@
+:root {
+  --primary-color: #11875d;
+  --secondary-color: #003246;
+  --tertiary-color: #025a8f;
+  --text-secondary-color: #ffffff;
+  --copyright-year: "2020";
+  --copyright-brand: "724 Market";
+  --logo-brand: url("../../img/logo/724-logo.svg");
+}

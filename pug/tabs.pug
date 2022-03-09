@@ -1,0 +1,425 @@
+//-//- Use Master Template Base
+extends master/base.pug
+
+
+//-//- Page Title
+block title
+	title Monito Template
+
+
+//-//- Custom Meta
+block custom-meta
+	meta(name="description", content="Monito Template")
+
+
+//-//- Custom Style
+block custom-style
+
+
+//-//- Body
+block body
+	- var bodyClass= ''; // body class
+	include master/bodyclass.pug
+
+
+	//-//- Include sidenav
+	include master/sidenav.pug
+
+
+	// Main content
+	main#panel.main-content
+
+
+		//-//- Include topbar
+		include master/topbar.pug
+
+
+		// Breadcrumb
+		.header.bg-gray-1.pb-6
+			.container-fluid
+				.header-body
+
+					.row.align-items-center.py-4
+						.col-lg-12
+
+							//- h2.h2.text-secondary.d-inline-block.mb-0 Dashboard
+
+							nav.d-none.d-md-inline-block(aria-label="breadcrumb")
+								ol.breadcrumb.breadcrumb-links.breadcrumb-light
+									li.breadcrumb-item
+										a(href="#", title="กลับไปหน้า Dashboard"): i.fad.fa-home-lg-alt
+									li.breadcrumb-item
+										a(href="#", title="Dashboard") Dashboards
+									li.breadcrumb-item.active(aria-current="page") เมนูย่อย
+
+
+		// Content area
+		.container-fluid.mt--6
+			|
+			|
+			|
+			|
+
+			// ========================= Page content ===============================
+
+			.container-content
+				|
+				|
+				.row
+					.col-12.pr-0.pl-0
+						h1.display-4 Tabs
+					|
+					|
+					.col-12.col-xl-6.col-md-6
+						.col-12.mt-3.pr-0.pl-0
+							h3 Tabs left
+						|
+						|
+						// Tabs  Left
+						ul.nav.nav-tabs
+							li.nav-item
+								a.nav-link.active(href="#homeLeft") Home
+							li.nav-item
+								a.nav-link(href="#menu1Left") Menu 1
+							li.nav-item
+								a.nav-link(href="#menu2Left") Menu 2
+						.tab-content
+							#homeLeft.container.tab-pane.active
+								h3 HOME
+								p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+							#menu1Left.container.tab-pane.fade
+								h3 Menu 1
+								p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+							#menu2Left.container.tab-pane.fade
+								h3 Menu 2
+								p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+						// End Tabs Left
+					|
+					|
+					.col-12.col-xl-6.col-md-6
+						.col-12.mt-3.pr-0.pl-0
+							h3 Tabs right
+						|
+						|
+						// Tabs  right
+						ul.nav.nav-tabs.justify-content-end
+							li.nav-item
+								a.nav-link.active(href="#homeRight") Home
+							li.nav-item
+								a.nav-link(href="#menu1Right") Menu 1
+							li.nav-item
+								a.nav-link(href="#menu2Right") Menu 2
+						.tab-content
+							#homeRight.container.tab-pane.active
+								h3 HOME
+								p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+							#menu1Right.container.tab-pane.fade
+								h3 Menu 1
+								p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+							#menu2Right.container.tab-pane.fade
+								h3 Menu 2
+								p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+						// End Tabs right
+					|
+					|
+					.col-12.col-xl-6.col-md-6
+						.col-12.mt-5.pr-0.pl-0
+							h3 Tabs center
+						|
+						|
+						// Tabs  center
+						ul.nav.nav-tabs.justify-content-center
+							li.nav-item
+								a.nav-link.active(href="#homeCenter") Home
+							li.nav-item
+								a.nav-link(href="#menu1Center") Menu 1
+							li.nav-item
+								a.nav-link(href="#menu2Center") Menu 2
+						.tab-content
+							#homeCenter.container.tab-pane.active
+								h3 HOME
+								p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+							#menu1Center.container.tab-pane.fade
+								h3 Menu 1
+								p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+							#menu2Center.container.tab-pane.fade
+								h3 Menu 2
+								p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+						//  End Tabs center
+					|
+					|
+					.col-12.col-xl-6.col-md-6
+						.col-12.mt-5.pr-0.pl-0
+							h3 Tabs around
+						|
+						|
+						// Tabs  around
+						ul.nav.nav-tabs.justify-content-around
+							li.nav-item
+								a.nav-link.active(href="#homeAround") Home
+							li.nav-item
+								a.nav-link(href="#menu1Around") Menu 1
+							li.nav-item
+								a.nav-link(href="#menu2Aroundr") Menu 2
+						.tab-content
+							#homeAround.container.tab-pane.active
+								h3 HOME
+								p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+							#menu1Around.container.tab-pane.fade
+								h3 Menu 1
+								p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+							#menu2Around.container.tab-pane.fade
+								h3 Menu 2
+								p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+						// End Tabs around
+					|
+					|
+					.col-12
+						.col-12.mt-5.pr-0.pl-0
+							h3 Tabs between
+						|
+						|
+						// Tabs  between
+						ul.nav.nav-tabs.justify-content-between
+							li.nav-item
+								a.nav-link.active(href="#homeBetween") Home
+							li.nav-item
+								a.nav-link(href="#menu1Between") Menu 1
+							li.nav-item
+								a.nav-link(href="#menu2Between") Menu 2
+							li.nav-item
+								a.nav-link(href="#menu3Between") Menu 3
+							li.nav-item
+								a.nav-link(href="#menu4Between") Menu 4
+							li.nav-item
+								a.nav-link(href="#menu5Between") Menu 5
+						.tab-content
+							#homeBetween.container.tab-pane.active
+								h3 HOME
+								p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+							#menu1Between.container.tab-pane.fade
+								h3 Menu 1
+								p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+							#menu2Between.container.tab-pane.fade
+								h3 Menu 2
+								p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+							#menu3Between.container.tab-pane.fade
+								h3 Menu 3
+								p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+							#menu4Between.container.tab-pane.fade
+								h3 Menu 4
+								p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+							#menu5Between.container.tab-pane.fade
+								h3 Menu 5
+								p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+						//  End Tabs between
+					|
+					|
+					|
+					.col-12
+						.col-12.mt-5.pr-0.pl-0
+							h3 Tabs vertical
+						|
+						|
+						// Tabs  around
+						.tabs-vertical
+							ul.nav.nav-tabs.nav-tabs-vertical
+								li.nav-item
+									a.nav-link.active(href="#homeVertical") Home
+								li.nav-item
+									a.nav-link(href="#menu1Vertical") Menu 1
+								li.nav-item
+									a.nav-link(href="#menu2Vertical") Menu 2
+							.tab-content.tab-content-vertical
+								#homeVertical.container.tab-pane.active
+									h3 HOME
+									p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but alsothe leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+								#menu1Vertical.container.tab-pane.fade
+									h3 Menu 1
+									p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but alsothe leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+								#menu2Vertical.container.tab-pane.fade
+									h3 Menu 2
+									p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but alsothe leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+						//  End Tabs around
+					|
+					|
+					.col-12.col-xl-6.col-md-6
+						.col-12.mt-5.pr-0.pl-0
+							h3 Pills left
+						// Pills left
+						ul.nav.nav-pills.mb-3#pills-tabContent(role="tablist")
+							li.nav-item
+								a.nav-link.active#pills-home-tab(data-toggle="pill", href="#pillsHome", role="tab", aria-controls="pills-home", aria-selected="true") Home
+							li.nav-item
+								a.nav-link#pills-profile-tab(data-toggle="pill", href="#pillsProfile", role="tab", aria-controls="pills-profile", aria-selected="false") Profile
+							li.nav-item
+								a.nav-link#pills-contact-tab(data-toggle="pill", href="#pillsContact", role="tab", aria-controls="pills-contact", aria-selected="false") Contact
+						.tab-content.pills-content#pills-tabContent
+							.tab-pane.fade.show.active#pillsHome(role="tabpanel", aria-labelledby="pills-home-tab")
+								h3 HOME
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							.tab-pane.fade#pillsProfile(role="tabpanel", aria-labelledby="pills-profile-tab")
+								h3 Profile
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							.tab-pane.fade#pillsContact(role="tabpanel", aria-labelledby="pills-contact-tab")
+								h3 Contact
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						//  End Pills left
+					|
+					|
+					.col-12.col-xl-6.col-md-6
+						.col-12.mt-5.pr-0.pl-0
+							h3 Pills right
+						|
+						|
+						// Pills left
+						ul.nav.nav-pills.mb-3.justify-content-end#pills-tab(role="tablist")
+							li.nav-item
+								a.nav-link.active#pills-home-tab(data-toggle="pill", href="#pillsHomeRight", role="tab", aria-controls="pills-home", aria-selected="true") Home
+							li.nav-item
+								a.nav-link#pills-profile-tab(data-toggle="pill", href="#pillsProfileRight", role="tab", aria-controls="pills-profile", aria-selected="false") Profile
+							li.nav-item
+								a.nav-link#pills-contact-tab(data-toggle="pill", href="#pillsContactRight", role="tab", aria-controls="pills-contact", aria-selected="false") Contact
+						.tab-content.pills-content#pills-tabContent
+							.tab-pane.fade.show.active#pillsHomeRight(role="tabpanel", aria-labelledby="pills-home-tab")
+								h3 HOME
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							.tab-pane.fade#pillsProfileRight(role="tabpanel", aria-labelledby="pills-profile-tab")
+								h3 Profile
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							.tab-pane.fade#pillsContactRight(role="tabpanel", aria-labelledby="pills-contact-tab")
+								h3 Contact
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						//  End Pills right
+					|
+					|
+					.col-12.col-xl-6.col-md-6
+						.col-12.mt-5.pr-0.pl-0
+							h3 Pills center
+						|
+						|
+						//  Pills center
+						ul.nav.nav-pills.mb-3.justify-content-center#pills-tab(role="tablist")
+							li.nav-item
+								a.nav-link.active#pills-home-tab(data-toggle="pill", href="#pillsHomeCenter", role="tab", aria-controls="pills-home", aria-selected="true") Home
+							li.nav-item
+								a.nav-link#pills-profile-tab(data-toggle="pill", href="#pillsProfileCenter", role="tab", aria-controls="pills-profile", aria-selected="false") Profile
+							li.nav-item
+								a.nav-link#pills-contact-tab(data-toggle="pill", href="#pillsContactCenter", role="tab", aria-controls="pills-contact", aria-selected="false") Contact
+						.tab-content.pills-content#pills-tabContent
+							.tab-pane.fade.show.active#pillsHomeCenter(role="tabpanel", aria-labelledby="pills-home-tab")
+								h3 HOME
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							.tab-pane.fade#pillsProfileCenter(role="tabpanel", aria-labelledby="pills-profile-tab")
+								h3 Profile
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							.tab-pane.fade#pillsContactCenter(role="tabpanel", aria-labelledby="pills-contact-tab")
+								h3 Contact
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						//  End Pills center
+					|
+					|
+					.col-12.col-xl-6.col-md-6
+						.col-12.mt-5.pr-0.pl-0
+							h3 Pills around
+						|
+						|
+						//  Pills center
+						ul.nav.nav-pills.mb-3.justify-content-around#pills-tab(role="tablist")
+							li.nav-item
+								a.nav-link.active#pills-home-tab(data-toggle="pill", href="#pillsHomeCenter", role="tab", aria-controls="pills-home", aria-selected="true") Home
+							li.nav-item
+								a.nav-link#pills-profile-tab(data-toggle="pill", href="#pillsProfileAround", role="tab", aria-controls="pills-profile", aria-selected="false") Profile
+							li.nav-item
+								a.nav-link#pills-contact-tab(data-toggle="pill", href="#pillsContactAround", role="tab", aria-controls="pills-contact", aria-selected="false") Contact
+						.tab-content.pills-content#pills-tabContent
+							.tab-pane.fade.show.active#pillsHomeAround(role="tabpanel", aria-labelledby="pills-home-tab")
+								h3 HOME
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							.tab-pane.fade#pillsProfileAround(role="tabpanel", aria-labelledby="pills-profile-tab")
+								h3 Profile
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							.tab-pane.fade#pillsContactAround(role="tabpanel", aria-labelledby="pills-contact-tab")
+								h3 Contact
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						//  End Pills center
+					|
+					|
+					.col-12
+						.col-12.mt-5.pr-0.pl-0
+							h3 Pills between
+						|
+						|
+						// Pills center
+						ul.nav.nav-pills.mb-3.justify-content-between#pills-tab(role="tablist")
+							li.nav-item
+								a.nav-link.active#pills-home-tab(data-toggle="pill", href="#pillsHomeCenter", role="tab", aria-controls="pills-home", aria-selected="true") Home
+							li.nav-item
+								a.nav-link#pills-profile-tab(data-toggle="pill", href="#pillsProfileBetween", role="tab", aria-controls="pills-profile", aria-selected="false") Profile
+							li.nav-item
+								a.nav-link#pills-contact-tab(data-toggle="pill", href="#pillsContactBetween", role="tab", aria-controls="pills-contact", aria-selected="false") Contact
+						.tab-content.pills-content#pills-tabContent
+							.tab-pane.fade.show.active#pillsHomeBetween(role="tabpanel", aria-labelledby="pills-home-tab")
+								h3 HOME
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							.tab-pane.fade#pillsProfileBetween(role="tabpanel", aria-labelledby="pills-profile-tab")
+								h3 Profile
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							.tab-pane.fade#pillsContactBetween(role="tabpanel", aria-labelledby="pills-contact-tab")
+								h3 Contact
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						//  End Pills center
+					|
+					|
+					.col-12
+						.col-12.mt-5.pr-0.pl-0
+							h3 Pills vertical
+						|
+						|
+						//  Pills center
+						.row
+							.col-3
+								.nav.flex-column.nav-pills#v-pills-tab(role="tablist", aria-orientation="vertical")
+									a.nav-link.active.mb-2#v-pills-home-tab(data-toggle="pill", href="#v-pills-home", role="tab", aria-controls="v-pills-home", aria-selected="true") Home
+									a.nav-link.mb-2#v-pills-profile-tab(data-toggle="pill", href="#v-pills-profile", role="tab", aria-controls="v-pills-profile", aria-selected="false") Profile
+									a.nav-link.mb-2#v-pills-messages-tab(data-toggle="pill", href="#v-pills-messages", role="tab", aria-controls="v-pills-messages", aria-selected="false") Messages
+									a.nav-link.mb-2#v-pills-settings-tab(data-toggle="pill", href="#v-pills-settings", role="tab", aria-controls="v-pills-settings", aria-selected="false") Settings
+							.col-9
+								.tab-content.pills-content#v-pills-tabContent
+									.tab-pane.fade.show.active#v-pills-home(role="tabpanel", aria-labelledby="v-pills-home-tab")
+										h3 HOME
+										p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but alsothe leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+									.tab-pane.fade#v-pills-profile(role="tabpanel", aria-labelledby="v-pills-profile-tab")
+										h3 Profile
+										p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but alsothe leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+									.tab-pane.fade#v-pills-messages(role="tabpanel", aria-labelledby="v-pills-messages-tab")
+										h3 Messages
+										p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but alsothe leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+									.tab-pane.fade#v-pills-settings(role="tabpanel", aria-labelledby="v-pills-settings-tab")
+										h3 Settings
+										p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but alsothe leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+						// End Pills center
+				|
+				|
+			// ======================== End Page content =============================
+			|
+			|
+			|
+			|
+			//-//- Include footer
+			include master/footer.pug
+
+
+	// Main Script
+	block script
+		include script/master-script.js
+
+
+	// Custom Script
+	block custom-script
+		|
+		//- <script src="../../assets/js/custom.js?v=1.0.0"></script>
+
+	|
+	|
+	</body>

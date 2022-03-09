@@ -1,0 +1,517 @@
+//-//- Use Master Template Base
+extends master/base.pug
+
+
+//-//- Page Title
+block title
+	title Monito Template
+
+
+//-//- Custom Meta
+block custom-meta
+	meta(name="description", content="Monito Template")
+
+
+//-//- Custom Style
+block custom-style
+
+
+//-//- Body
+block body
+	- var bodyClass= ''; // body class
+	include master/bodyclass.pug
+
+
+	//-//- Include sidenav
+	include master/sidenav.pug
+
+
+	// Main content
+	main#panel.main-content
+
+
+		//-//- Include topbar
+		include master/topbar.pug
+
+
+		// Breadcrumb
+		.header.bg-gray-1.pb-6
+			.container-fluid
+				.header-body
+
+					.row.align-items-center.py-4
+						.col-lg-12
+
+							//- h2.h2.text-secondary.d-inline-block.mb-0 Dashboard
+
+							nav.d-none.d-md-inline-block(aria-label="breadcrumb")
+								ol.breadcrumb.breadcrumb-links.breadcrumb-light
+									li.breadcrumb-item
+										a(href="#", title="กลับไปหน้า Dashboard"): i.fad.fa-home-lg-alt
+									li.breadcrumb-item
+										a(href="#", title="Dashboard") Dashboards
+									li.breadcrumb-item.active(aria-current="page") Form layout
+
+
+		// Content area
+		.container-fluid.mt--6
+			|
+			|
+			|
+			|
+
+			// ========================= Page content ===============================
+
+			.container-content
+				|
+				|
+				.row
+					.col-12
+						h1.display-4 Form Layouts
+				|
+				|
+				.row
+					.col-12.mt-3
+						h3 Form Default
+					.col-6
+						.card.p-3
+							|
+							|
+							// HTML From
+							form
+								.form-group
+									label Email address
+									input(type="email").form-control
+									small#emailHelp.form-text.text-muted We'll never share your email with anyone else.
+								|
+								|
+								.form-group
+									label Password
+									input(type="password").form-control
+								|
+								|
+								.form-group.form-check
+									input(type="checkbox").form-check-input#exampleCheck1
+									label.form-check-label(for="exampleCheck1") Check me out
+								|
+								|
+								button(type="submit").btn.btn-primary Submit
+							// END HTML From
+							|
+							|
+					.col-6
+						.card.p-3
+							|
+							|
+							//  HTML From
+							form
+								.form-group
+									label Example select
+									select(data-toggle="select")
+										option Mustard
+										option Ketchup
+										option Relish
+									select.selectpicker
+										option Mustard
+										option Ketchup
+										option Relish
+								fieldset.form-group
+									.row
+										legend.col-form-label.col-sm-2.pt-0 Radios
+										.col-sm-10
+											.form-check
+												input.form-check-input(type="radio", name="gridRadios", value="option1", checked)#gridRadios1
+												label.form-check-label(for="gridRadios1") First radio
+											.form-check(disabled)
+												input.form-check-input(type="radio", name="gridRadios", value="option3", disabled)#gridRadios3
+												label.form-check-label(for="gridRadios3") Third disabled radio
+								|
+								|
+								.form-group.row
+									.col-sm-2 Check
+									.col-sm-10
+										.form-check
+											input.form-check-input(type="checkbox")#gridCheck1
+											label.form-check-label(for="gridCheck1") Example checkbox
+										.form-check(disabled)
+											input.form-check-input(type="checkbox", disabled)#gridCheck2
+											label.form-check-label(for="gridCheck2") Example checkbox
+								|
+								|
+								.form-group.row
+									.col-sm-10
+										button(type="submit").btn.btn-primary Sign in
+							// END HTML From
+							|
+							|
+					.col-12.mt-3
+						h3 Form Horizontal
+					.col-12
+						.card.p-3
+							|
+							|
+							// HTML From
+							<form>
+								.form-group.row
+									label.col-sm-2.col-form-label Username
+									.col-sm-10
+										input(type="text").form-control
+								|
+								|
+								.form-group.row
+									label.col-sm-2.col-form-label Email
+									.col-sm-10
+										input(type="text").form-control
+								|
+								|
+								.form-group.row
+									label.col-sm-2.col-form-label Password
+									.col-sm-10
+										input(type="password").form-control
+								|
+								|
+								.form-group.form-check
+									input(type="checkbox").form-check-input#exampleCheck1
+									label.form-check-label(for="exampleCheck1") Remember password
+							// END HTML From
+							|
+							|
+					.col-12.mt-3
+						h3 Form Inline
+					|
+					|
+					<div class="col-12">
+						<div class="card p-3">
+							|
+							|
+							// HTML From
+							form.form-inline
+								.form-group.mb-2
+									label.pr-3 Username
+									input(type="text", placeholder="use724").form-control
+								.form-group.mx-sm-3.mb-2
+									label.pr-3 Email
+									input(type="email", placeholder="Ex@724.com").form-control
+								.form-group.mx-sm-3.mb-2
+									label.pr-3 Password
+									input(type="password").form-control
+								button(type="submit").btn.btn-primary.mb-2 Confirm
+							// END HTML From
+							|
+							|
+							.col-12.pl-0.pr-0.mt-2
+								|
+								|
+								// HTML From
+								form.form-inline
+									.form-check.form-check-inline
+										input.form-check-input(type="radio", name="inlineRadioOptions", value="option1")#inlineRadio1
+										label.form-check-label(for="inlineRadio1") 1
+									|
+									|
+									.form-check.form-check-inline
+										input.form-check-input(type="radio", name="inlineRadioOptions", value="option2")#inlineRadio2
+										label.form-check-label(for="inlineRadio2") 2
+									|
+									|
+									.form-check.form-check-inline
+										input.form-check-input(type="radio", name="inlineRadioOptions", value="option3", disabled)#inlineRadio3
+										label.form-check-label(for="inlineRadio3") 3 (disabled)
+									|
+									|
+									.form-check.form-check-inline
+										input.form-check-input(type="checkbox", value="option1")#inlineCheckbox1
+										label.form-check-label(for="inlineCheckbox1") 1
+									|
+									|
+									.form-check.form-check-inline
+										input.form-check-input(type="checkbox", value="option2")#inlineCheckbox2
+										label.form-check-label(for="inlineCheckbox2") 2
+									|
+									|
+									.form-check.form-check-inline
+										input.form-check-input(type="checkbox", value="option3", disabled)#inlineCheckbox3
+										label.form-check-label(for="inlineCheckbox3", disabled) 3
+								// END HTML From
+								|
+								|
+					.col-6
+						.col-12.mt-3.pr-0.pl-0
+							h3 Form Example
+						.card.p-3
+							//  HTML From
+							form
+								.form-row
+									.form-group.col-md-6
+										label Email
+										input(type="email").form-control
+									|
+									|
+									.form-group.col-md-6
+										label Password
+										input(type="password").form-control
+									|
+									|
+								.form-group
+									label Address
+									input.form-control(type="text", placeholder="1234 Main St")
+									|
+									|
+								.form-group
+									label Address 2
+									input.form-control(type="text", placeholder="Apartment, studio, or floor")
+									|
+									|
+								.form-row
+									.form-group.col-md-6
+										label City
+										input(type="text").form-control
+									|
+									|
+									.form-group.col-md-4
+										label State
+										select.selectpicker
+											option Mustard
+											option Ketchup
+											option Relish
+									|
+									|
+									.form-group.col-md-2
+										label Zip
+										input(type="text").form-control
+									|
+									|
+								.form-group
+									.form-check
+										input.form-check-input(type="checkbox")#gridCheck
+										label.form-check-label(for="gridCheck") Check me out
+									|
+									|
+								button(type="submit").btn.btn-primary Sign in
+							// END HTML From
+							|
+							|
+					.col-6
+						.col-12.mt-3.pr-0.pl-0
+							h3 Form Validation
+						.card.p-3
+							//  HTML From
+							form
+								.form-row
+									.col-md-6.mb-3
+										label First name
+										input.form-control.is-valid(type="text", value="Mark", required)
+										.valid-feedback Looks good!
+									|
+									|
+									.col-md-6.mb-3
+										label Last name
+										input.form-control.is-valid(type="text", value="Otto", required)
+										.valid-feedback Looks good!
+								|
+								|
+								.form-group
+									label Address
+									input.form-control.is-valid(type="text", placeholder="1234 Main St", required)
+									.valid-feedback Looks good!
+								|
+								|
+								.form-row
+									.col-md-6.mb-3
+										label City
+										input(type="text", required).form-control.is-invalid
+										.invalid-feedback Please provide a valid city.
+									|
+									|
+									.col-md-3.mb-3
+										label State
+										select.selectpicker.is-invalid
+											option Mustard
+											option Ketchup
+											option Relish
+										.invalid-feedback Please select a valid state.
+									|
+									|
+									.col-md-3.mb-3
+										label Zip
+										input(type="text", required).form-control.is-invalid
+										.invalid-feedback Please provide a valid zip.
+								|
+								|
+								.form-group
+									.form-check
+										input.form-check-input.is-invalid(type="checkbox", value="", required)#invalidCheck3
+										label.form-check-label(for="invalidCheck3") Agree to terms and conditions
+										.invalid-feedback You must agree before submitting.
+									</div>
+								</div>
+								|
+								|
+								button.btn.btn-primary(type="submit") Submit form
+							// END HTML From
+							|
+							|
+					.col-6
+						.col-12.mt-3.pr-0.pl-0
+							h3 Form Disabled Fieldset
+						.card.p-3
+							// HTML From
+							form
+								fieldset(disabled)
+									|
+									|
+									.form-group
+										label Disabled input
+										input.form-control(type="text", placeholder="Disabled input")
+									|
+									|
+									.form-group
+										label Disabled select menu
+										select.selectpicker(disabled)
+											option Mustard
+											option Ketchup
+											option Relish
+										|
+										|
+									.form-group
+										.form-check
+											input.form-check-input(type="checkbox", disabled)#disabledFieldsetCheck
+											label.form-check-label(for="disabledFieldsetCheck") Can't check this
+										|
+										|
+									button(type="submit").btn.btn-primary Submit
+							//  END HTML From
+					|
+					|
+					.col-6
+						.col-12.mt-3.pr-0.pl-0
+							h3 Form Disabled Field
+						.card.p-3
+							//  HTML From
+							form
+								.form-group
+									label Disabled input
+									input.form-control(type="text", placeholder="Disabled input", disabled)
+								|
+								|
+								.form-group
+									label Disabled select menu
+									select.selectpicker(disabled)
+										option Mustard
+										option Ketchup
+										option Relish
+								|
+								|
+								.form-group
+									.form-check
+										input.form-check-input(type="checkbox", disabled)
+										label.form-check-label Can't check this
+								|
+								|
+								button(type="submit", disabled).btn.btn-primary Submit
+							//  END HTML From
+					|
+					|
+					.col-12
+						h3 Form Sizing
+					|
+					|
+					.col-12
+						.card.p-3
+							//  HTML From
+							.form-group
+								input.form-control.form-control-lg(type="text", placeholder=".form-control-lg")
+							|
+							|
+							.form-group
+								input.form-control(type="text", placeholder="Default input")
+							|
+							|
+							.form-group
+								input.form-control.form-control-sm(type="text", placeholder=".form-control-sm")
+							//  END HTML From
+							|
+							|
+					|
+					|
+					.col-12
+						h3 Form With Icons
+					|
+					|
+					.col-6
+						.card.p-3
+							//  HTML From
+							.input-group.mb-3
+								.input-group-prepend.prepend-icon.left
+									span.nput-group-text#basic-addon1
+										i.fal.fa-envelope-open-text
+								input.form-control.input-icon-left(type="email", placeholder="Email")
+							|
+							|
+							.input-group.mb-3
+								.input-group-prepend.prepend-icon.left
+									span.input-group-text#basic-addon1
+										i.fal.fa-user
+								input.form-control.input-icon-left(type="text", placeholder="Username")
+							|
+							|
+							.input-group.mb-3
+								.input-group-prepend.prepend-icon.left
+									span.input-group-text#basic-addon1
+										i.fal.fa-key
+								input.form-control.input-icon-left(type="password", placeholder="Password")
+							//  END HTML From
+							|
+							|
+					|
+					|
+					.col-6
+						.card.p-3
+							|
+							|
+							// HTML From
+							.input-group.mb-3
+								input.form-control.input-icon-right(type="text", placeholder="dollar sign")
+								.input-group-prepend.prepend-icon.right
+									span.input-group-text#basic-addon1
+										i.fal.fa-dollar-sign
+							|
+							|
+							.input-group.mb-3
+								input.form-control.input-icon-right(type="password", placeholder="Password1234")
+								.input-group-prepend.prepend-icon.right
+									span.input-group-text#basic-addon1
+										i.fal.fa-user-lock
+							|
+							|
+							.input-group.mb-3
+								input.form-control.input-icon-right(type="email", placeholder="Email")
+								.input-group-prepend.prepend-icon.right
+									span.input-group-text#basic-addon1
+										i.fal.fa-envelope-open-text
+							// END HTML From
+							|
+							|
+			// ======================== End Page content =============================
+
+			|
+			|
+			|
+			|
+			//-//- Include footer
+			include master/footer.pug
+
+
+	// Main Script
+	block script
+		include script/master-script.js
+
+
+	// Custom Script
+	block custom-script
+		|
+		//- <script src="../../assets/js/custom.js?v=1.0.0"></script>
+
+	|
+	|
+	</body>

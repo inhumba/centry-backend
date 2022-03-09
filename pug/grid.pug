@@ -1,0 +1,311 @@
+//-//- Use Master Template Base
+extends master/base.pug
+
+
+//-//- Page Title
+block title
+	title Monito Template
+
+
+//-//- Custom Meta
+block custom-meta
+	meta(name="description", content="Monito Template")
+
+
+//-//- Custom Style
+block custom-style
+
+
+//-//- Body
+block body
+	- var bodyClass= ''; // body class
+	include master/bodyclass.pug
+
+
+	//-//- Include sidenav
+	include master/sidenav.pug
+
+
+	// Main content
+	main#panel.main-content
+
+
+		//-//- Include topbar
+		include master/topbar.pug
+
+
+		// Breadcrumb
+		.header.bg-gray-1.pb-6
+			.container-fluid
+				.header-body
+
+					.row.align-items-center.py-4
+						.col-lg-12
+
+							//- h2.h2.text-secondary.d-inline-block.mb-0 Dashboard
+
+							nav.d-none.d-md-inline-block(aria-label="breadcrumb")
+								ol.breadcrumb.breadcrumb-links.breadcrumb-light
+									li.breadcrumb-item
+										a(href="#", title="กลับไปหน้า Dashboard"): i.fad.fa-home-lg-alt
+									li.breadcrumb-item
+										a(href="#", title="Dashboard") Dashboards
+									li.breadcrumb-item.active(aria-current="page") Grid layout
+
+
+		// Content area
+		.container-fluid.mt--6
+			|
+			|
+			|
+			|
+
+			// ========================= Page content ===============================//
+			.container-content
+				|
+				|
+				.row
+					.col-12
+						h1.display-4 Grid 12
+				|
+				|
+				//  Grid : Desktop 100% , Tablet 100% , Mobile 100%
+				.row
+					.col-12.col-xl-12.col-md-12
+						.grid.mt-0 100%
+				//  End Grid
+				|
+				|
+				// Grid : Desktop 50% , Tablet 50% , Mobile 100%
+				.row
+					.col-12.col-xl-6.col-md-6
+						.grid 50%
+					.col-12.col-xl-6.col-md-6
+						.grid 50%
+				//  End Grid
+				|
+				|
+				// Grid : Desktop 30% , Tablet 30% , Mobile 100%
+				.row
+					.col-12.col-xl-4.col-md-4
+						.grid 30%
+					.col-12.col-xl-4.col-md-4
+						.grid 30%
+					.col-12.col-xl-4.col-md-4
+						.grid 30%
+				//  End Grid
+				|
+				|
+				// Grid : Desktop 25% , Tablet 25% , Mobile 100%
+				.row
+					.col-12.col-xl-3.col-md-3
+						.grid 25%
+					.col-12.col-xl-3.col-md-3
+						.grid 25%
+					.col-12.col-xl-3.col-md-3
+						.grid 25%
+					.col-12.col-xl-3.col-md-3
+						.grid 25%
+				// End Grid
+				|
+				|
+				//  Grid : Desktop 20% , Tablet 20% , Mobile 100%
+				.row
+					.col-12.col-xl-2.col-md-2
+						.grid 20%
+					.col-12.col-xl-2.col-md-2
+						.grid 20%
+					.col-12.col-xl-2.col-md-2
+						.grid 20%
+					.col-12.col-xl-2.col-md-2
+						.grid 20%
+					.col-12.col-xl-2.col-md-2
+						.grid 20%
+					.col-12.col-xl-2.col-md-2
+						.grid 20%
+				//  End Grid
+				|
+				|
+				//  Grid : Desktop 10% , Tablet 10% , Mobile 100%
+				.row
+					.col-12.col-xl-1.col-md-1
+						.grid 10%
+					.col-12.col-xl-1.col-md-1
+						.grid 10%
+					.col-12.col-xl-1.col-md-1
+						.grid 10%
+					.col-12.col-xl-1.col-md-1
+						.grid 10%
+					.col-12.col-xl-1.col-md-1
+						.grid 10%
+					.col-12.col-xl-1.col-md-1
+						.grid 10%
+					.col-12.col-xl-1.col-md-1
+						.grid 10%
+					.col-12.col-xl-1.col-md-1
+						.grid 10%
+					.col-12.col-xl-1.col-md-1
+						.grid 10%
+					.col-12.col-xl-1.col-md-1
+						.grid 10%
+					.col-12.col-xl-1.col-md-1
+						.grid 10%
+					.col-12.col-xl-1.col-md-1
+						.grid 10%
+				//  End Grid
+				|
+				|
+				//  Grid : Desktop 1/12,11/12   , Tablet 1/12,11/12   , Mobile 12
+				.row
+					.col-12.col-xl-1.col-md-1
+						.grid 1/12
+					.col-12.col-xl-11.col-md-11
+						.grid 11/12
+				//  End Grid
+				|
+				|
+				//  Grid : Desktop 2/12,10/12   , Tablet 2/12,10/12   , Mobile 12
+				.row
+					.col-12.col-xl-2.col-md-2
+						.grid 2/12
+					.col-12.col-xl-10.col-md-10
+						.grid 10/12
+				//  End Grid
+				|
+				|
+				// Grid : Desktop 3/12,9/12   , Tablet 3/12,9/12   , Mobile 12
+				.row
+					.col-12.col-xl-3.col-md-3
+						.grid 3/12
+					.col-12.col-xl-9.col-md-9
+						.grid 9/12
+				//  End Grid
+				|
+				|
+				//  Grid : Desktop 4/12,8/12   , Tablet 4/12,8/12   , Mobile 12
+				.row
+					.col-12.col-xl-4.col-md-4
+						.grid 4/12
+					.col-12.col-xl-8.col-md-8
+						.grid 8/12
+				//  End Grid
+				|
+				|
+				//  Grid : Desktop 5/12,7/12   , Tablet 5/12,7/12   , Mobile 12
+				.row
+					.col-12.col-xl-5.col-md-5
+						.grid 5/12
+					.col-12.col-xl-7.col-md-7
+						.grid 7/12
+				//  End Grid
+				|
+				|
+				//  Grid : Desktop 6/12,6/12   , Tablet 6/12,6/12   , Mobile 12
+				.row
+					.col-12.col-xl-6.col-md-6
+						.grid 6/12
+					.col-12.col-xl-6.col-md-6
+						.grid 6/12
+				//  End Grid
+				|
+				|
+				//  Grid : Desktop 7/12,5/12   , Tablet 7/12,5/12   , Mobile 12
+				.row
+					.col-12.col-xl-7.col-md-7
+						.grid 7/12
+					.col-12.col-xl-5.col-md-5
+						.grid 5/12
+				// End Grid
+				|
+				|
+				// Grid : Desktop 8/12,4/12   , Tablet 8/12,4/12   , Mobile 12
+				.row
+					.col-12.col-xl-8.col-md-8
+						.grid 8/12
+					.col-12.col-xl-4.col-md-4
+						.grid 4/12
+				// End Grid
+				|
+				|
+				//  Grid : Desktop 9/12,3/12   , Tablet 9/12,3/12   , Mobile 12
+				.row
+					.col-12.col-xl-9.col-md-9
+						.grid 9/12
+					.col-12.col-xl-3.col-md-3
+						.grid 3/12
+				// End Grid
+				|
+				|
+				//  Grid : Desktop 10/12, 2/12   , Tablet 10/12,2/12   , Mobile 12
+				.row
+					.col-12.col-xl-10.col-md-10
+						.grid 10/12
+					.col-12.col-xl-2.col-md-2
+						.grid 2/12
+				//  End Grid
+				|
+				|
+				//  Grid : Desktop 11/12, 1/12   , Tablet 11/12,1/12   , Mobile 12
+				.row
+					.col-12.col-xl-11.col-md-11
+						.grid 11/12
+					.col-12.col-xl-1.col-md-1
+						.grid 1/12
+				// End Grid
+				|
+				|
+				// Grid : Desktop 3/12, 3/12, 6/12   , Tablet 3/12, 3/12, 6/12   , Mobile 12
+				.row
+					.col-12.col-xl-3.col-md-3
+						.grid 3/12
+					.col-12.col-xl-3.col-md-3
+						.grid 3/12
+					.col-12.col-xl-6.col-md-6
+						.grid 6/12
+				//  End Grid
+				|
+				|
+				// Grid : Desktop 2/12, 8/12, 2/12   , Tablet 2/12, 8/12, 2/12   , Mobile 12
+				.row
+					.col-12.col-xl-2.col-md-2
+						.grid 2/12
+					.col-12.col-xl-8.col-md-8
+						.grid 8/12
+					.col-12.col-xl-2.col-md-2
+						.grid 2/12
+				//  End Grid
+				|
+				|
+				// Grid : Desktop 5/12, 4/12, 3/12   , Tablet 5/12, 4/12, 3/12   , Mobile 12
+				.row
+					.col-12.col-xl-5.col-md-5
+						.grid 5/12
+					.col-12.col-xl-4.col-md-4
+						.grid 4/12
+					.col-12.col-xl-3.col-md-3
+						.grid 3/12
+				// End Grid
+				|
+				|
+			// ======================== End Page content =============================
+			|
+			|
+			|
+			|
+			//-//- Include footer
+			include master/footer.pug
+
+
+	// Main Script
+	block script
+		include script/master-script.js
+
+
+	// Custom Script
+	block custom-script
+		|
+		//- <script src="../../assets/js/custom.js?v=1.0.0"></script>
+
+	|
+	|
+	</body>

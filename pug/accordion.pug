@@ -1,0 +1,128 @@
+//-//- Use Master Template Base
+extends master/base.pug
+
+
+//-//- Page Title
+block title
+	title Monito Template
+
+
+//-//- Custom Meta
+block custom-meta
+	meta(name="description", content="Monito Template")
+
+
+//-//- Custom Style
+block custom-style
+
+
+//-//- Body
+block body
+	- var bodyClass= ''; // body class
+	include master/bodyclass.pug
+
+
+	//-//- Include sidenav
+	include master/sidenav.pug
+
+
+	// Main content
+	main#panel.main-content
+
+
+		//-//- Include topbar
+		include master/topbar.pug
+
+
+		// Breadcrumb
+		.header.bg-gray-1.pb-6
+			.container-fluid
+				.header-body
+
+					.row.align-items-center.py-4
+						.col-lg-12
+
+							//- h2.h2.text-secondary.d-inline-block.mb-0 Dashboard
+
+							nav.d-none.d-md-inline-block(aria-label="breadcrumb")
+								ol.breadcrumb.breadcrumb-links.breadcrumb-light
+									li.breadcrumb-item
+										a(href="#", title="กลับไปหน้า Dashboard"): i.fad.fa-home-lg-alt
+									li.breadcrumb-item
+										a(href="#", title="Dashboard") Dashboards
+									li.breadcrumb-item.active(aria-current="page") Accordion
+
+
+		// Content area
+		.container-fluid.mt--6
+			|
+			|
+			|
+			|
+
+			// ========================= Page content ===============================
+
+			.container-content
+				.col-12.mb-3.pr-0.pl-0
+					h3 Accordion
+				|
+				|
+				//  Accordion
+				|
+				|
+				.row
+					#accordion
+						.col-12
+
+							.card
+								.card-header.collapsed-custom#headingOne
+									button.btn.btn-link.collapsed(data-toggle="collapse", data-target="#collapseOne", aria-expanded="true", aria-controls="collapseOne")
+										p.mb-0 Collapsible Group Item #1
+										i.fa.fa-angle-up(aria-hidden="true")
+
+								#collapseOne.collapse(aria-labelledby="headingOne", data-parent="#accordion")
+									.card-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor  brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, suntaliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+							.card
+								.card-header.collapsed-custom#headingTwo
+									button.btn.btn-link.collapsed(data-toggle="collapse", data-target="#collapseTwo", aria-expanded="false", aria-controls="collapseTwo")
+										p.mb-0 Collapsible Group Item #2
+										i.fa.fa-angle-up(aria-hidden="true")
+								#collapseTwo.collapse(aria-labelledby="headingTwo", data-parent="#accordion")
+									.card-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor  brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, suntaliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+							.card
+								.card-header.collapsed-custom#headingThree
+									h5.mb-0
+										button.btn.btn-link.collapsed(data-toggle="collapse", data-target="#collapseThree", aria-expanded="false", aria-controls="collapseThree")
+											p.mb-0 Collapsible Group Item #3
+											i.fa.fa-angle-up(aria-hidden="true")
+								#collapseThree.collapse(aria-labelledby="headingThree", data-parent="#accordion")
+									.card-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor  brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, suntaliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					// END Accordion
+					|
+					|
+
+			// ======================== End Page content =============================
+
+			|
+			|
+			|
+			|
+			//-//- Include footer
+			include master/footer.pug
+
+
+	// Main Script
+	block script
+		include script/master-script.js
+
+
+	// Custom Script
+	block custom-script
+		|
+		//- <script src="../../assets/js/custom.js?v=1.0.0"></script>
+
+	|
+	|
+	</body>

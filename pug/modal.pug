@@ -1,0 +1,421 @@
+//-//- Use Master Template Base
+extends master/base.pug
+
+
+//-//- Page Title
+block title
+	title Monito Template
+
+
+//-//- Custom Meta
+block custom-meta
+	meta(name="description", content="Monito Template")
+
+
+//-//- Custom Style
+block custom-style
+
+
+//-//- Body
+block body
+	- var bodyClass= ''; // body class
+	include master/bodyclass.pug
+
+
+	//-//- Include sidenav
+	include master/sidenav.pug
+
+
+	// Main content
+	main#panel.main-content
+
+
+		//-//- Include topbar
+		include master/topbar.pug
+
+
+		// Breadcrumb
+		.header.bg-gray-1.pb-6
+			.container-fluid
+				.header-body
+
+					.row.align-items-center.py-4
+						.col-lg-12
+
+							//- h2.h2.text-secondary.d-inline-block.mb-0 Dashboard
+
+							nav.d-none.d-md-inline-block(aria-label="breadcrumb")
+								ol.breadcrumb.breadcrumb-links.breadcrumb-light
+									li.breadcrumb-item
+										a(href="#", title="กลับไปหน้า Dashboard"): i.fad.fa-home-lg-alt
+									li.breadcrumb-item
+										a(href="#", title="Dashboard") Dashboards
+									li.breadcrumb-item.active(aria-current="page") เมนูย่อย
+
+
+		// Content area
+		.container-fluid.mt--6
+			|
+			|
+			|
+			|
+
+			// ========================= Page content ===============================
+
+			.container-content
+
+				// Modal
+				.row
+					// Modal Examples
+					.col-12.col-xl-4.col-md-4
+						.col-12.mt-3.pr-0.pl-0
+							h3 Modal Examples
+						.card
+							.col-12.pt-3.pb-3.modal-custom-theme
+								//  HTML Modal Examples
+								//  Button trigger modal
+								button.btn.btn-primary(type="button", data-toggle="modal", data-target="#exampleModal") Modal Examples
+								//  Modal
+								.modal.fade(id="exampleModal", tabindex="-1", role="dialog", aria-labelledby="exampleModalLabel", aria-hidden="true")
+									.modal-dialog
+										.modal-content
+											.modal-header
+												h5.modal-title#exampleModalLabel Modal title
+												button.close(type="button", data-dismiss="modal", aria-label="Close")
+													i.fal.fa-times
+											.modal-body Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+											.modal-footer
+												button.btn.btn-secondary(type="button", data-dismiss="modal") Close
+												button(type="button").btn.btn-primary Save changes
+								//  End HTML Modal Examples
+					// END Modal Examples
+					|
+					|
+					//  Modal Static backdrop
+					.col-12.col-xl-4.col-md-4
+						.col-12.mt-3.pr-0.pl-0
+							h3 Modal Static backdrop
+						.card
+							.col-12.pt-3.pb-3.modal-custom-theme
+								// HTML Modal Static backdrop
+								|
+								|
+								//  Button trigger modal
+								button.btn.btn-primary(type="button", data-toggle="modal", data-target="#staticBackdrop") Launch static backdrop modal
+								//  Modal
+								.modal.fade#staticBackdrop(data-backdrop="static", data-keyboard="false", tabindex="-1", role="dialog", aria-labelledby="staticBackdropLabel", aria-hidden="true")
+									.modal-dialog
+										.modal-content
+											.modal-header
+												h5.modal-title#staticBackdropLabel Modal title
+												button.close(type="button", data-dismiss="modal", aria-label="Close")
+													i.fal.fa-times
+											.modal-body Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+											.modal-footer
+												button.btn.btn-secondary(type="button", data-dismiss="modal") Close
+												button(type="button").btn.btn-primary Understood
+								// End HTML Modal Static backdrop
+					// END Modal Static backdrop
+					|
+					|
+					// Modal Scrolling long content
+					.col-12.col-xl-4.col-md-4
+						.col-12.mt-3.pr-0.pl-0
+							h3 Modal Scrolling long content
+						.card
+							.col-12.pt-3.pb-3.modal-custom-theme
+								//  HTML Modal Scrolling long content
+								|
+								|
+								//  Button trigger modal
+								button.btn.btn-primary(type="button", data-toggle="modal", data-target="#Scrolling") Launch scrolling long content
+								|
+								|
+								//  Modal
+								.modal.fade#Scrolling(data-keyboard="false", tabindex="-1", role="dialog", aria-labelledby="ScrollingLabel", aria-hidden="true")
+									.modal-dialog.modal-dialog-scrollable
+										.modal-content
+											.modal-header
+												h5.modal-title#ScrollingLabel Modal title
+												button.close(type="button", data-dismiss="modal", aria-label="Close")
+													i.fal.fa-times
+											.modal-body Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+											.modal-footer
+												button.btn.btn-secondary(type="button", data-dismiss="modal") Close
+												button(type="button").btn.btn-primary Understood
+								// End HTML Scrolling long content
+					// END Modal Scrolling long content
+					|
+					|
+					// Modal Optional sizes
+					.col-12.col-xl-12.col-md-12
+						.col-12.mt-3.pr-0.pl-0
+							h3 Modal Optional sizes
+						.card
+							.col-12.pt-3.pb-3.modal-custom-theme
+								// HTML Modal Optional sizes
+								|
+								|
+								//  Button trigger modal
+								button.btn.btn-primary(type="button", data-toggle="modal", data-target="#Small") Small modal
+								// Modal small
+								.modal.fade#Small(tabindex="-1", role="dialog", aria-labelledby="SmallLabel", aria-hidden="true")
+									.modal-dialog.modal-sm
+										.modal-content
+											.modal-header
+												h5.modal-title#SmallLabel Modal title
+												button.close(type="button", data-dismiss="modal", aria-label="Close")
+													i.fal.fa-times
+											.modal-body Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+											.modal-footer
+												button.btn.btn-secondary(type="button", data-dismiss="modal") Close
+												button(type="button").btn.btn-primary Save changes
+								// End Modal small
+								|
+								|
+								//  Button trigger modal
+								button.btn.btn-primary(type="button", data-toggle="modal", data-target="#Large") Large modal
+								//  Modal Large
+								.modal.fade#Large(tabindex="-1", role="dialog", aria-labelledby="LargeLabel", aria-hidden="true")
+									.modal-dialog.modal-lg
+										.modal-content
+											.modal-header
+												h5.modal-title#LargeLabel Modal title
+												button.close(type="button", data-dismiss="modal", aria-label="Close")
+													i.fal.fa-times
+											.modal-body Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+											.modal-footer
+												button.btn.btn-secondary(type="button", data-dismiss="modal") Close
+												button(type="button").btn.btn-primary Save changes
+								// End Modal Large
+								|
+								|
+								//  Button trigger modal
+								button.btn.btn-primary(type="button", data-toggle="modal", data-target="#Extar") Extar Large modal
+								// Modal  Extar Large
+								.modal.fade#Extar(tabindex="-1", role="dialog", aria-labelledby="ExtarLabel", aria-hidden="true")
+									.modal-dialog.modal-xl
+										.modal-content
+											.modal-header
+												h5.modal-title(id="ExtarLabel") Modal title
+												button.close(type="button", data-dismiss="modal", aria-label="Close")
+													i.fal.fa-times
+											.modal-body Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+											.modal-footer
+												button.btn.btn-secondary(type="button", data-dismiss="modal") Close
+												button(type="button").btn.btn-primary Save changes
+								//  End Modal  Extar Large
+								|
+								|
+								// End HTML Optional sizes
+					//  END Modal Optional sizes
+					|
+					|
+					// Modal message
+					.col-12.col-xl-12.col-md-12
+						.col-12.mt-3.pr-0.pl-0
+							h3 Modal message
+						.card
+							.col-12.pt-3.pb-3.modal-custom-theme
+								|
+								|
+								// HTML Modal message
+								// Button trigger modal
+								button.btn.btn-primary(type="button", data-toggle="modal", data-target="#message") Message
+								|
+								|
+								// Modal  masses
+								.modal.fade#message(tabindex="-1", role="dialog", aria-labelledby="messageLabel", aria-hidden="true")
+									.modal-dialog.modal-message.modal-sm
+										.modal-content
+											.modal-header
+												button.close(type="button", data-dismiss="modal", aria-label="Close")
+													i.fal.fa-times
+											.modal-body
+												h2.text-center Thank You!
+												p.text-center Your submission is received and we will contact you soon
+											.modal-footer.justify-content-center
+												button.btn.btn-secondary(type="button", data-dismiss="modal") Close
+								// End HTML Modal masses
+								|
+								|
+								// HTML Modal message static backdrop
+								//  Button trigger modal
+								button.btn.btn-primary(type="button", data-toggle="modal", data-target="#messageStatic") Static backdrop
+								|
+								//  Modal  Static backdrop
+								.modal.fade#messageStatic(tabindex="-1", role="dialog", data-backdrop="static", aria-labelledby="messageStaticLabel", aria-hidden="true")
+									.modal-dialog.modal-message.modal-sm
+										.modal-content
+											.modal-header
+												button.close(type="button", data-dismiss="modal", aria-label="Close")
+													i.fal.fa-times
+											.modal-body
+												h2.text-center Thank You!
+												p.text-center Your submission is received and we will contact you soon
+											.modal-footer.justify-content-center
+												button.btn.btn-secondary(type="button", data-dismiss="modal") Close
+								//  End HTML Modal Static backdrop
+								|
+								|
+								// HTML Modal  success
+								//  Button trigger modal
+								button.btn.btn-success(type="button", data-toggle="modal", data-target="#success") Success
+								|
+								|
+								// Modal  success
+								.modal.fade#success(tabindex="-1", role="dialog", aria-labelledby="successLabel", aria-hidden="true")
+									.modal-dialog.modal-message.modal-sm
+										.modal-content
+											.modal-header
+												button.close(type="button", data-dismiss="modal", aria-label="Close")
+													i.fal.fa-times
+											.modal-body.modal-success
+												h2.text-center Good job
+												p.text-center Your submission is received and we will contact you soon
+											.modal-footer.justify-content-center
+								// End HTML Modal success
+								|
+								|
+								//  HTML Modal Warning
+								//  Button trigger modal
+								button.btn.btn-danger(type="button", data-toggle="modal", data-target="#Warning") Warning
+								|
+								|
+								//  Modal  warning
+								.modal.fade#Warning(tabindex="-1", role="dialog", data-backdrop="static", aria-labelledby="WarningLabel", aria-hidden="true")
+									.modal-dialog.modal-message.modal-sm
+										.modal-content
+											.modal-header
+												button.close(type="button", data-dismiss="modal", aria-label="Close")
+													i.fal.fa-times
+											.modal-body.modal-warning
+												h2.text-center Warning !
+												p.text-center Warning! Hot water is hot!
+											.modal-footer.justify-content-center
+								// End HTML Modal Warning
+								|
+								|
+								//  HTML Modal  success with icon
+								//  Button trigger modal
+								button.btn.btn-success(type="button", data-toggle="modal", data-target="#successIcon") Success with icon
+								|
+								|
+								// Modal  success with icon
+								.modal.fade#successIcon(tabindex="-1", role="dialog", aria-labelledby="successIconLabel", aria-hidden="true")
+									.modal-dialog.modal-message.modal-sm
+										.modal-content
+											.modal-header
+												button.close(type="button", data-dismiss="modal", aria-label="Close")
+													i.fal.fa-times
+											.modal-body.modal-success
+												.content-icon
+													i.fad.fa-check-circle
+												h2.text-center Good job
+												p.text-center Your submission is received and we will contact you soon
+											.modal-footer.justify-content-center
+								// End HTML Modal success with icon
+								|
+								|
+								// HTML Modal Warning with icon
+								//  Button trigger modal
+								button.btn.btn-danger(type="button", data-toggle="modal", data-target="#WarningIcon") Warning with icon
+								|
+								|
+								//  Modal  warning with icon
+								.modal.fade#WarningIcon(tabindex="-1", role="dialog", data-backdrop="static", aria-labelledby="WarningIconLabel", aria-hidden="true")
+									.modal-dialog.modal-message.modal-sm
+										.modal-content
+											.modal-header
+												button.close(type="button", data-dismiss="modal", aria-label="Close")
+													i.fal.fa-times
+											.modal-body.modal-warning
+												.content-icon
+													i.fad.fa-exclamation-circle
+												h2.text-center Warning !
+												p.text-center Warning! Hot water is hot!
+											.modal-footer.justify-content-center
+								//  End HTML Modal Warning with icon
+								|
+								|
+					// END Modal masses
+					|
+					|
+					// Modal forms content
+					.col-12.col-xl-4.col-md-4
+						.col-12.mt-3.pr-0.pl-0
+							h3 Modal forms content
+						.card
+							.col-12.pt-3.pb-3.modal-custom-theme
+								// HTML Modal forms content
+								|
+								|
+								//  Button trigger modal
+								button.btn.btn-primary(type="button", data-toggle="modal", data-target="#forms") Modal forms content
+								|
+								|
+								//  Modal forms content
+								.modal.fade#forms(data-keyboard="false", tabindex="-1", role="dialog", aria-labelledby="formsLabel", aria-hidden="true")
+									.modal-dialog
+										.modal-content
+											.modal-header
+												h5.modal-title#formsLabel Modal title
+												button.close(type="button", data-dismiss="modal", aria-label="Close")
+													i.fal.fa-times
+											.modal-body
+												form
+													.form-row
+														.col-md-6.mb-3
+															label(for="validationDefault01") First name
+															input.form-control(type="text", id="validationDefault01", value="Mark", required)
+														.col-md-6.mb-3
+															label(for="validationDefault02") Last name
+															input.form-control(type="text", id="validationDefault02", value="Otto", required)
+													.form-row
+														.col-md-6.mb-3
+															label(for="validationDefault03") City
+															input.form-control#validationDefault03(type="text", required)
+														.col-md-3.mb-3
+															label(for="validationDefault04") State
+															select.custom-select#validationDefault04(type="text", required)
+																option(selected, disabled, value="") Choose...
+																option ...
+														.col-md-3.mb-3
+															label(for="validationDefault05") Zip
+															input.form-control#validationDefault05(type="text", required)
+													.form-group
+														.form-check
+															input.form-check-input(type="checkbox", value="", required)#invalidCheck2
+															label.form-check-label(for="invalidCheck2") Agree to terms and conditions
+													button.btn.btn-primary(type="submit") Submit form
+											.modal-footer
+												button.btn.btn-secondary(type="button", data-dismiss="modal") Close
+												button(type="button").btn.btn-primary Understood
+								//  End HTML Modal forms content
+					// END Modal forms content
+					|
+					|
+				// END Modal
+			// ======================== End Page content =============================
+
+			|
+			|
+			|
+			|
+			//-//- Include footer
+			include master/footer.pug
+
+
+	// Main Script
+	block script
+		include script/master-script.js
+
+
+	// Custom Script
+	block custom-script
+		|
+		//- <script src="../../assets/js/custom.js?v=1.0.0"></script>
+
+	|
+	|
+	</body>

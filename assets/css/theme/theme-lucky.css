@@ -1,0 +1,9 @@
+:root {
+	--primary-color: #400ea0;
+	--secondary-color: #5512d5;
+	--tertiary-color: #01f59d;
+	--text-secondary-color: #ffffff;
+	--copyright-year: "2020";
+	--copyright-brand: "Lucky Leasing";
+	--logo-brand: url("../../img/logo/lucky-logo.svg");
+}

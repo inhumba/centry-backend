@@ -1,0 +1,323 @@
+//-//- Use Master Template Base
+extends master/base.pug
+
+
+//-//- Page Title
+block title
+	title Monito Template
+
+
+//-//- Custom Meta
+block custom-meta
+	meta(name="description", content="Monito Template")
+
+
+//-//- Custom Style
+block custom-style
+
+
+//-//- Body
+block body
+	- var bodyClass= ''; // body class
+	include master/bodyclass.pug
+
+
+	//-//- Include sidenav
+	include master/sidenav.pug
+
+
+	// Main content
+	main#panel.main-content
+
+
+		//-//- Include topbar
+		include master/topbar.pug
+
+
+		// Breadcrumb
+		.header.bg-gray-1.pb-6
+			.container-fluid
+				.header-body
+
+					.row.align-items-center.py-4
+						.col-lg-12
+
+							//- h2.h2.text-secondary.d-inline-block.mb-0 Dashboard
+
+							nav.d-none.d-md-inline-block(aria-label="breadcrumb")
+								ol.breadcrumb.breadcrumb-links.breadcrumb-light
+									li.breadcrumb-item
+										a(href="#", title="กลับไปหน้า Dashboard"): i.fad.fa-home-lg-alt
+									li.breadcrumb-item
+										a(href="#", title="Dashboard") Dashboards
+									li.breadcrumb-item.active(aria-current="page") Card
+
+
+		// Content area
+		.container-fluid.mt--6
+			|
+			|
+			|
+			|
+
+			// ========================= Page content ===============================
+
+			.container-content
+				|
+				|
+				//  CARD BODY ONLY
+				.row
+					.col-xl-4.col-md-6
+						// HTML Card body
+						.card
+							.card-body
+								p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.With supporting text below as,With supporting text below as a natural lead-in to additional content
+						// End Card body
+					|
+					|
+					.col-xl-4.col-md-6
+						// HTML Card body Add title
+						.card
+							.card-body
+								h5.card-title Header
+								h6.card-subtitle.mb-2.text-muted Card subtitle
+								p Some quick example text to build on the card title and make up the bulk of the card's content.With supporting text below as
+						// End Card body
+					|
+					|
+					.col-xl-4.col-md-12
+						//  HTML Card body Add link
+						<div class="card">
+							<div class="card-body">
+								h5.card-title Header
+								h6.card-subtitle.mb-2.text-muted Card subtitle
+								p Some quick example text to build on the card title and make up the bulk of the card's content.With supporting text below as
+								a(href="#").card-link Card link
+								a(href="#").card-link Another link
+							</div>
+						</div>
+						// End Card body
+						|
+						|
+				//  END CARD BODY ONLY
+				|
+				|
+
+
+				//  CARD HEADER
+				.row
+					.col-xl-6.col-md-6
+						// HTML Card haeder
+						.card
+							.card-header
+								h5.card-title Header
+								h6.card-subtitle.mb-0.text-muted Card subtitle
+								.card-body
+									p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.With supporting text below as,With supporting text below as a natural lead-in to additional content Another link
+						// End Card header
+					|
+					|
+					.col-xl-6.col-md-6
+						// HTML Card haeder add Link
+						.card
+							.card-header
+								h5.card-title.mb-0 Header
+							.card-body
+								p.card-text With supporting text below as a natural lead-in to additional content.
+								a(href="#").btn.btn-primary Go somewhere
+						// End Card haeder add Link
+					|
+					|
+					.col-xl-6.col-md-6
+						// HTML Card haeder add dropdown
+						.card
+							.card-header.card-header-btn
+								h5.card-title.mb-0 Header
+								.dropdown
+									button.btn.btn-secondary.dropdown-toggle.btn-sm#dropdownMenuButton(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") Dropdown button
+										.dropdown-menu.dropdown-menu-right(aria-labelledby="dropdownMenuButton")
+											a.dropdown-item(href="#") Action
+											a.dropdown-item(href="#") Another action
+											a.dropdown-item(href="#") Something else here
+							.card-body
+								p.card-text With supporting text below as a natural lead-in to additional content.
+						// End Card haeder add dropdown
+						|
+						|
+					.col-xl-6.col-md-6
+						//  HTML Card haeder add button
+						.card
+							.card-header.card-header-btn
+								h5.card-title.mb-0 Header
+								button(href="#").btn.btn-primary.btn-sm Go somewhere
+							.card-body
+								p.card-text With supporting text below as a natural lead-in to additional content.
+						// End Card haeder add button
+						|
+						|
+					.col-xl-6.col-md-6
+						// HTML Card haeder add button icon
+						.card
+							.card-header.card-header-btn
+								<div>
+									h5.card-title Header
+									h6.card-subtitle.mb-0.text-muted Card subtitle
+								</div>
+								<div>
+									.dropdown
+										button.btn.btn-secondary.dropdown-toggle.btn-sm#dropdownMenuButton(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+											i.fal.fa-sliders-h
+										.dropdown-menu.dropdown-menu-right(aria-labelledby="dropdownMenuButton")
+											a.dropdown-item(href="#") Action
+											a.dropdown-item(href="#") Another action
+											a.dropdown-item(href="#") Something else here
+									button(href="#").btn.btn-primary.btn-sm
+										i.fal.fa-trash-alt
+								</div>
+							.card-body
+								p.card-text With supporting text below as a natural lead-in to additional content. Some quick example text to build on the card title and make up the bulk of the card's content</p>
+
+						// End Card haeder add button icon
+						|
+						|
+					.col-xl-6.col-md-6
+						// HTML Card haeder add List
+						.card
+							.card-header
+								h5.card-title.mb-0 Header
+							ul.list-group.list-group-flush
+								li.list-group-item Cras justo odio
+								li.list-group-item Dapibus ac facilisis in
+								li.list-group-item Vestibulum at eros
+						// End Card haeder add List
+						|
+						|
+				//  END CARD HEADER
+				|
+				|
+				//  CARD HEADER FOTTER
+				.row
+					.col-xl-4.col-md-6
+						// HTML Card haeder footer
+						.card
+							.card-header
+								h5.card-title Header
+								h6.card-subtitle.mb-0.text-muted Card subtitle
+							.card-body
+								p.card-text ome quick example text to build on the card title and make up the bulk of the card's content.
+							.card-footer.text-muted Footer
+						// End Card haeder footer
+						|
+						|
+					.col-xl-4.col-md-6
+						// HTML Card haeder footer add button
+						.card
+							.card-header.card-header-btn
+								h5.card-title.mb-0 Header
+								button(href="#").btn.btn-primary.btn-sm Go somewhere
+							.card-body
+								p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.With supporting text below as
+							.card-footer.text-muted Footer
+						// End Card body
+						|
+						|
+					.col-xl-4.col-md-12
+						// HTML Card body Add list
+						.card
+							.card-header.card-header-btn
+								<div>
+									h5.card-title.mb-0 Header
+								</div>
+								<div>
+									.dropdown
+										button.btn.btn-secondary.dropdown-toggle.btn-sm#dropdownMenuButton(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+											i.fal.fa-sliders-h
+										.dropdown-menu.dropdown-menu-right(aria-labelledby="dropdownMenuButton")
+											a.dropdown-item(href="#") Action
+											a.dropdown-item(href="#") Another action
+											a.dropdown-item(href="#") Something else here
+								</div>
+							ul.list-group.list-group-flush
+								li.list-group-item Cras justo odio
+								li.list-group-item Dapibus ac facilisis in
+								li.list-group-item Vestibulum at eros
+							.card-footer.text-muted Footer
+						// End Card list
+					|
+					|
+					.col-xl-12.col-md-12
+						//  HTML Card body Tables
+						.card
+							.card-header.card-header-btn
+								<div>
+									h5.card-title.mb-0 Header Tables
+								</div>
+								<div>
+									.dropdown
+										button.btn.btn-secondary.dropdown-toggle.btn-sm#dropdownMenuButton(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+											i.fal.fa-sliders-h
+										.dropdown-menu.dropdown-menu-right(aria-labelledby="dropdownMenuButton")
+											a.dropdown-item(href="#") Action
+											a.dropdown-item(href="#") Another action
+											a.dropdown-item(href="#") Something else here
+								</div>
+							.card-body
+								.table-responsive
+									table.table.table-striped
+										thead
+											tr
+												th(scope="col") #
+												th(scope="col") First
+												th(scope="col") Last
+												th(scope="col") Handle
+												th(scope="col") Heading
+										tbody
+											tr
+												th(scope="row") 1
+												td Mark
+												td Otto
+												td @mdo
+												td Cell
+											tr
+												th(scope="row") 2
+												td Jacob
+												td Thornton
+												td @fat
+												td Cell
+											tr
+												th(scope="row") 3
+												td Larry
+												td the Bird
+												td @twitter
+												td Cell
+											</tr>
+							.card-footer.text-muted Footer
+						// End Card list
+						|
+						|
+				//  END CARD HEADER FOTTER
+				|
+				|
+			// ======================== End Page content =============================
+
+			|
+			|
+			|
+			|
+			//-//- Include footer
+			include master/footer.pug
+
+
+	// Main Script
+	block script
+		include script/master-script.js
+
+
+	// Custom Script
+	block custom-script
+		|
+		//- <script src="../../assets/js/custom.js?v=1.0.0"></script>
+
+	|
+	|
+	</body>

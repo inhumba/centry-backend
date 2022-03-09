@@ -1,0 +1,9 @@
+:root {
+  --primary-color: #1171EF;
+  --secondary-color: #172B4D;
+  --tertiary-color: #11CDEF;
+  --text-secondary-color: #ffffff;
+  --copyright-year: "2022";
+  --copyright-brand: "CENTRY";
+  --logo-brand: url("../../img/logo/centry-logo.png");
+}

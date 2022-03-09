@@ -1,0 +1,558 @@
+//-//- Use Master Template Base
+extends master/base.pug
+
+
+//-//- Page Title
+block title
+	title Monito Template
+
+
+//-//- Custom Meta
+block custom-meta
+	meta(name="description", content="Monito Template")
+
+
+//-//- Custom Style
+block custom-style
+
+
+//-//- Body
+block body
+	- var bodyClass= ''; // body class
+	include master/bodyclass.pug
+
+
+	//-//- Include sidenav
+	include master/sidenav.pug
+
+
+	// Main content
+	main#panel.main-content
+
+
+		//-//- Include topbar
+		include master/topbar.pug
+
+
+		// Breadcrumb
+		.header.bg-gray-1.pb-6
+			.container-fluid
+				.header-body
+
+					.row.align-items-center.py-4
+						.col-lg-12
+
+							//- h2.h2.text-secondary.d-inline-block.mb-0 Dashboard
+
+							nav.d-none.d-md-inline-block(aria-label="breadcrumb")
+								ol.breadcrumb.breadcrumb-links.breadcrumb-light
+									li.breadcrumb-item
+										a(href="#", title="กลับไปหน้า Dashboard"): i.fad.fa-home-lg-alt
+									li.breadcrumb-item
+										a(href="#", title="Dashboard") Dashboards
+									li.breadcrumb-item.active(aria-current="page") Button
+
+
+		// Content area
+		.container-fluid.mt--6
+			|
+			|
+			|
+			|
+
+			// ========================= Page content ===============================
+
+			.container-content
+				|
+				|
+				.row
+					|
+					|
+					//  Switch
+					.col-xl-6.col-md-6
+						.col-12.mt-3.pl-0.pr-l
+							h3 Switch
+						.card
+							.col-12.pb-3.pt-3
+								.align-between
+									// HTML
+									label.switch
+										input(type="checkbox", checked).primary
+										span.slider
+
+									label.switch
+										input(type="checkbox").primary
+										span.slider
+
+									label.switch
+										input(type="checkbox", checked).primary
+										span.slider.round
+
+									label.switch
+										input(type="checkbox").primary
+										span.slider.round
+									// End HTML
+					// END
+					|
+					|
+					// Button Examples
+					.col-12.mt-3
+						h3 Button Examples
+					.col-12
+						.card
+							.col-12.pt-3.pb-3
+								// HTML Button Examples
+								button(type="button").btn.btn-primary Primary
+								button(type="button").btn.btn-secondary Secondary
+								button(type="button").btn.btn-success Success
+								button(type="button").btn.btn-danger Danger
+								button(type="button").btn.btn-warning Warning
+								button(type="button").btn.btn-info Info
+								button(type="button").btn.btn-light Light
+								button(type="button").btn.btn-dark Dark
+								button(type="button").btn.btn-link Link
+								// End HTML Button Examples
+					// END Button Examples
+					|
+					|
+					//  Outline buttons
+					.col-12.mt-3
+						h3 Outline buttons
+					.col-12
+						.card
+							.col-12.pt-3.pb-3
+								// HTML Outline buttons
+								button(type="button").btn.btn-outline-primary Primary
+								button(type="button").btn.btn-outline-secondary Secondary
+								button(type="button").btn.btn-outline-success Success
+								button(type="button").btn.btn-outline-danger Danger
+								button(type="button").btn.btn-outline-warning Warning
+								button(type="button").btn.btn-outline-info Info
+								button(type="button").btn.btn-outline-light Light
+								button(type="button").btn.btn-outline-dark Dark
+								// End HTML Outline buttons
+					//  END Outline buttons
+					|
+					|
+					//  Align left buttons
+					.col-xl-6.col-md-6
+						.col-12.mt-3
+							h3 Align left buttons
+						.card
+							.col-12.pb-3.pt-3
+								//  HTML Align center buttons
+								.align-left
+									button(type="button").btn.btn-primary Primary
+									button(type="button").btn.btn-danger Danger
+									button(type="button").btn.btn-warning Warning
+								//End HTML Align center buttons
+					//  END Align left buttons
+					|
+					|
+					// Align right buttons
+					.col-xl-6.col-md-6
+						.col-12.mt-3
+							h3 Align right buttons
+						.card
+							.col-12.pb-3.pt-3
+								// HTML Align right buttons
+								.align-right
+									button(type="button").btn.btn-primary Primary
+									button(type="button").btn.btn-danger Danger
+									button(type="button").btn.btn-warning Warning
+								// End HTML Align right buttons
+					//  END Align right buttons
+					|
+					|
+					//  Align center buttons
+					.col-xl-12.col-md-12
+						.col-12.mt-3
+							h3 Align right center
+						.card
+							.col-12.pb-3.pt-3
+								//  HTML Align center buttons
+								.align-center
+									button(type="button").btn.btn-primary Primary
+									button(type="button").btn.btn-secondary Secondary
+									button(type="button").btn.btn-success Success
+									button(type="button").btn.btn-danger Danger
+									button(type="button").btn.btn-warning Warning
+									button(type="button").btn.btn-info Info
+									button(type="button").btn.btn-light Light
+									button(type="button").btn.btn-dark Dark
+									button(type="button").btn.btn-link Link
+								// End HTML Align center buttons
+					// END Align center buttons
+					|
+					|
+					//  Align between buttons
+					.col-xl-6.col-md-6
+						.col-12.mt-3
+							h3 Align between buttons
+						.card
+							.col-12.pb-3.pt-3
+								// HTML Align between buttons
+								.align-between
+									button(type="button").btn.btn-primary Primary
+									button(type="button").btn.btn-danger Danger
+									button(type="button").btn.btn-warning Warning
+								//End HTML Align between buttons
+					//  END Align between buttons
+					|
+					|
+					//  Align around buttons
+					.col-xl-6.col-md-6
+						.col-12.mt-3
+							h3 Align around buttons
+						.card
+							.col-12.pb-3.pt-3
+								// HTML Align around buttons
+								.align-around
+									button(type="button").btn.btn-primary Primary
+									button(type="button").btn.btn-danger Danger
+									button(type="button").btn.btn-warning Warning
+								// End HTML Align around buttons
+					// END Align around buttons
+					|
+					|
+					// large sizes buttons
+					.col-xl-6.col-md-6
+						.col-12.mt-3
+							h3 Large sizes buttons
+						.card
+							.col-12.pb-3.pt-3
+								// HTML large sizes buttons
+								button(type="button").btn.btn-primary.btn-lg Primary
+								button(type="button").btn.btn-secondary.btn-lg Secondary
+								button(type="button").btn.btn-success.btn-lg Success
+								button(type="button").btn.btn-danger.btn-lg Danger
+								button(type="button").btn.btn-warning.btn-lg Warning
+								// End HTML large sizes buttons
+					//  END large sizes buttons
+					|
+					|
+					//  small sizes buttons
+					.col-xl-6.col-md-6
+						.col-12.mt-3
+							h3 Small sizes buttons
+						.card
+							.col-12.pb-3.pt-3
+								// HTML small sizes buttons
+								button(type="button").btn.btn-primary.btn-sm Primary
+								button(type="button").btn.btn-secondary.btn-sm Secondary
+								button(type="button").btn.btn-success.btn-sm Success
+								button(type="button").btn.btn-danger.btn-sm Danger
+								button(type="button").btn.btn-warning.btn-sm Warning
+								button(type="button").btn.btn-light.btn-sm Light
+								// End HTML small sizes buttons
+					// END small sizes buttons
+					|
+					|
+					//  link buttons
+					.col-xl-6.col-md-6
+						.col-12.mt-3
+							h3 Link buttons
+						.card
+							.col-12.pb-3.pt-3
+								// HTML link buttons
+								a.btn.btn-primary(href="#", role="button", aria-pressed="true") Primary
+								a.btn.btn-danger(href="#", role="button", aria-pressed="true") Danger
+								a.btn.btn-warning(href="#", role="button", aria-pressed="true") Warning
+								a.btn.btn-light(href="#", role="button", aria-pressed="true") Light
+								// End HTML link button
+					//  END link buttons
+					|
+					|
+					//  disabled buttons
+					.col-xl-6.col-md-6
+						.col-12.mt-3
+							<h3>Disabled buttons</h3>
+						.card
+							.col-12.pb-3.pt-3
+								// HTML disabled buttons
+								button(type="button", disabled).btn.btn-primary Primary
+								button(type="button", disabled).btn.btn-secondary Secondary
+								button(type="button", disabled).btn.btn-success Success
+								button(type="button", disabled).btn.btn-danger Danger
+								// End HTML disabled buttons
+					//  END disabled buttons
+					|
+					|
+					//  Button group
+					.col-xl-12.col-md-12
+						.col-12.mt-3
+							h3 Button group
+						.card
+							.col-12.pb-3.pt-3
+								// HTML Button group
+								.btn-group.mr-2(role="group")
+									button(type="button").btn.btn-primary
+										i.fal.fa-chevron-double-left
+									button(type="button").btn.btn-primary 1
+									button(type="button").btn.btn-primary 2
+									button(type="button").btn.btn-primary 3
+									button(type="button").btn.btn-primary 4
+									button(type="button").btn.btn-primary 5
+									button(type="button").btn.btn-primary 6
+									button(type="button").btn.btn-primary 7
+									button(type="button").btn.btn-primary 8
+									button(type="button").btn.btn-primary
+										i.fal.fa-chevron-double-right
+								.btn-group.mr-2(role="group")
+									button(type="button").btn.btn-primary A
+									button(type="button").btn.btn-primary B
+									button(type="button").btn.btn-primary C
+									button(type="button").btn.btn-primary D
+									button(type="button").btn.btn-primary E
+									button(type="button").btn.btn-primary F
+									button(type="button").btn.btn-primary G
+									button(type="button").btn.btn-primary H
+									button(type="button").btn.btn-primary I
+									button(type="button").btn.btn-primary J
+									button(type="button").btn.btn-primary K
+								// End HTML Button group
+					// END Button group
+					|
+					|
+					//  Sizes button group
+					.col-xl-6.col-md-6
+						.col-12.mt-3
+							h3 Sizes button group
+						.card
+							.col-12.pb-3.pt-3
+								.col-12.pr-0.pr-0.pb-3
+									// HTML small sizes button group
+									.btn-group(role="group")
+										button(type="button").btn.btn-primary.btn-sm small
+										button(type="button").btn.btn-secondary.btn-sm small
+										button(type="button").btn.btn-success.btn-sm small
+										button(type="button").btn.btn-danger.btn-sm small
+										button(type="button").btn.btn-warning.btn-sm small
+										button(type="button").btn.btn-light.btn-sm small
+									// End HTML small sizes button group
+									|
+								.col-12.pr-0.pr-0.pb-3
+									// HTML default sizes button group
+									.btn-group(role="group")
+										button(type="button").btn.btn-primary default
+										button(type="button").btn.btn-secondary default
+										button(type="button").btn.btn-success default
+										button(type="button").btn.btn-danger default
+										button(type="button").btn.btn-warning default
+									// End HTML default sizes button group
+									|
+								.col-12.pr-0.pr-0
+									// HTML Large sizes button group
+									.btn-group(role="group")
+										button(type="button").btn.btn-primary.btn-lg Large
+										button(type="button").btn.btn-secondary.btn-lg Large
+										button(type="button").btn.btn-success.btn-lg Large
+										button(type="button").btn.btn-danger.btn-lg Large
+										button(type="button").btn.btn-warning.btn-lg Large
+										button(type="button").btn.btn-light.btn-lg Large
+									// End HTML Large sizes button group
+					// END Sizes button group
+					|
+					|
+					//  Vertical variation buttons
+					.col-xl-6.col-md-6
+						.col-12.mt-3
+							h3 Vertical variation buttons
+						.card
+							.col-12.pb-3.pt-3
+								// HTML Vertical variation buttons
+								.btn-group-vertical
+									button(type="button").btn.btn-primary Primary
+									button(type="button").btn.btn-secondary Secondary
+									button(type="button").btn.btn-success Success
+									button(type="button").btn.btn-danger Danger
+								// End HTML Vertical variation buttons
+								|
+								|
+								// HTML Vertical variation buttons
+								.btn-group-vertical
+									button(type="button").btn.btn-warning Warning
+									button(type="button").btn.btn-info Info
+									button(type="button").btn.btn-light Light
+									button(type="button").btn.btn-dark Dark
+								// End HTML Vertical variation buttons
+								|
+								|
+								// HTML Vertical variation buttons
+								.btn-group-vertical
+									button(type="button").btn.btn-outline-primary Primary
+									button(type="button").btn.btn-outline-secondary Secondary
+									button(type="button").btn.btn-outline-success Success
+									button(type="button").btn.btn-outline-danger Danger
+								// End HTML Vertical variation buttons
+								|
+								|
+								// HTML Vertical variation buttons
+								.btn-group-vertical
+									button(type="button").btn.btn-outline-warning Warning
+									button(type="button").btn.btn-outline-info Info
+									button(type="button").btn.btn-outline-light Light
+									button(type="button").btn.btn-outline-dark Dark
+								// End HTML Vertical variation buttons
+					//  END Vertical variation buttons
+					|
+					|
+					// Icon buttons
+					.col-xl-12.col-md-12
+						.col-12.mt-3
+							h3 Icon buttons
+						.card
+							.col-12.pb-3.pt-3
+								//  HTML Icon buttons
+								button(type="button").btn.btn-icon.btn-primary
+									i.fas.fa-cogs
+								button(type="button").btn.btn-icon.btn-secondary
+									i.fal.fa-clone
+								button(type="button").btn.btn-icon.btn-success
+									i.fal.fa-clipboard
+								button(type="button").btn.btn-icon.btn-danger
+									i.fal.fa-edit
+								button(type="button").btn.btn-icon.btn-warning
+									i.fal.fa-file-alt
+								button(type="button").btn.btn-icon.btn-info
+									i.fal.fa-paper-plane
+								button(type="button").btn.btn-icon.btn-light
+									i.fal.fa-paperclip
+								button(type="button").btn.btn-icon.btn-dark
+									i.fal.fa-trash-alt
+								button(type="button").btn.btn-icon.btn-outline-primary
+									i.fal.fa-bell-slash
+								button(type="button").btn.btn-icon.btn-outline-secondary
+									i.fal.fa-calendar-alt
+								button(type="button").btn.btn-icon.btn-outline-success
+									i.fal.fa-check-circle
+								button(type="button").btn.btn-icon.btn-outline-danger
+									i.fal.fa-check-square
+								button(type="button").btn.btn-icon.btn-outline-warning
+									i.fal.fa-cloud-download
+								button(type="button").btn.btn-icon.btn-outline-info
+									i.fal.fa-cloud-upload
+								button(type="button").btn.btn-icon.btn-outline-light
+									i.fal.fa-database
+								// End HTML Icon buttons
+					//  END Icon buttons
+					|
+					|
+					//  Icon buttons
+					.col-xl-12.col-md-12
+						.col-12.mt-3
+							h3 Icon social buttons
+						.card
+							.col-12.pb-3.pt-3
+								// HTML Icon buttons
+								button(type="button").btn.btn-icon.btn-twitter
+									i.fab.fa-twitter
+								button(type="button").btn.btn-icon.btn-facebook
+									i.fab.fa-facebook-f
+								button(type="button").btn.btn-icon.btn-facebook
+									i.fab.fa-facebook-messenger
+								button(type="button").btn.btn-icon.btn-instagram
+									i.fab.fa-instagram
+								button(type="button").btn.btn-icon.btn-youtube
+									i.fab.fa-youtube
+								button(type="button").btn.btn-icon.btn-line
+									i.fab.fa-line
+								button(type="button").btn.btn-icon.btn-skype
+									i.fab.fa-skype
+								button(type="button").btn.btn-icon.btn-pinterest
+									i.fab.fa-pinterest
+								button(type="button").btn.btn-icon.btn-whatsapp
+									i.fab.fa-whatsapp
+								button(type="button").btn.btn-icon.btn-snapchat
+									i.fab.fa-snapchat-ghost
+								button(type="button").btn.btn-icon.btn-discord
+									i.fab.fa-discord
+								button(type="button").btn.btn-icon.btn-git
+									i.fab.fa-git-square
+								// End HTML Icon buttons
+					//  END Icon buttons
+					|
+					|
+					//  Icon left buttons
+					.col-xl-12.col-md-12
+						.col-12.mt-3
+							h3 Icon left buttons
+						.card
+							.col-12.pb-3.pt-3
+								// HTML Icon left buttons
+								button(type="button").btn.icon-left.btn-primary
+									i.fas.fa-cogs
+									| Setting
+								button(type="button").btn.icon-left.btn-secondary
+									i.fal.fa-clone
+									| Clone
+								button(type="button").btn.icon-left.btn-success
+									i.fal.fa-clipboard
+									| Clipboard
+								button(type="button").btn.icon-left.btn-danger
+									i.fal.fa-edit
+									| Edit
+								button(type="button").btn.icon-left.btn-warning
+									i.fal.fa-file-alt
+									| File
+								button(type="button").btn.icon-left.btn-info
+									i.fal.fa-paper-plane
+									| Plane
+								button(type="button").btn.icon-left.btn-light
+									i.fal.fa-paperclip
+									| Paperclip
+								button(type="button").btn.icon-left.btn-dark
+									i.fal.fa-trash-alt
+									| Delete
+								// End HTML Icon left buttons
+					//  END Icon left buttons
+					|
+					|
+					//  Icon right buttons
+					.col-xl-12.col-md-12
+						.col-12.mt-3
+							h3 Icon right buttons
+						.card
+							.col-12.pb-3.pt-3
+								//  HTML Icon right buttons
+								button(type="button").btn.icon-right.btn-outline-primary Bell
+									i.fal.fa-bell-slash
+								button(type="button").btn.icon-right.btn-outline-secondary Calendar
+									i.fal.fa-calendar-alt
+								button(type="button").btn.icon-right.btn-outline-success heck
+									i.fal.fa-check-circle
+								button(type="button").btn.icon-right.btn-outline-danger Square
+									i.fal.fa-check-square
+								button(type="button").btn.icon-right.btn-outline-warning Download
+									i.fal.fa-cloud-download
+								button(type="button").btn.icon-right.btn-outline-info Upload
+									i.fal.fa-cloud-upload
+								button(type="button").btn.icon-right.btn-outline-light Database
+									i.fal.fa-database
+								// End HTML Icon left buttons
+					// END Icon right buttons
+					|
+					|
+			// ======================== End Page content =============================
+
+			|
+			|
+			|
+			|
+			//-//- Include footer
+			include master/footer.pug
+
+
+	// Main Script
+	block script
+		include script/master-script.js
+
+
+	// Custom Script
+	block custom-script
+		|
+		//- <script src="../../assets/js/custom.js?v=1.0.0"></script>
+
+	|
+	|
+	</body>

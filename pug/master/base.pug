@@ -1,0 +1,75 @@
+doctype html
+html(lang="th")
+
+
+	head
+		//-//- Page Title
+		block title
+			title Default Title
+
+
+		//-//- Base Meta
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+		meta(name="author", content="724 Market")
+
+
+		//-//- Custom Meta
+		block custom-meta
+
+
+		// Font Style
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Prompt:400,500|Sarabun:400,600,800&display=swap&subset=thai")
+
+
+		// Core CSS
+		link(rel="stylesheet", href="../../assets/css/base/base.css")
+		//- link(rel="stylesheet", href="../../assets/vendor/bootstrap-select-1.13.14/dist/css/bootstrap-select.min.css")
+
+
+		// Theme CSS
+		link(rel="stylesheet", href="../../assets/css/theme/theme-724.css")
+
+
+		// Components CSS
+		link(rel="stylesheet", href="../../assets/css/components/components.css")
+
+
+		//-//- Custom Style
+		block custom-style
+
+
+		// Favicon
+		link(rel="icon", type="image/png", href="../../assets/img/favicon/724-favicon.png")
+
+
+		//-//- For IE
+		|
+		|
+		<!--[if IE]>
+			script(async, defer, src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+			|
+			|
+		<![endif]-->
+
+
+
+	//-//- Body
+	block body
+		include bodyclass.pug
+
+
+
+		// Main Script
+		block script
+
+
+		// Core Script
+		block core-script
+
+
+		// Custom Script
+		block custom-script
+
+
+		</body>

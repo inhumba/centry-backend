@@ -1,0 +1,9 @@
+:root {
+    --primary-color: #188f46;
+    --secondary-color: #001f2a;
+    --tertiary-color: #fed725;
+    --text-secondary-color: #ffffff;
+    --copyright-year: "2020";
+    --copyright-brand: "Srikrung Broker";
+    --logo-brand: url("../../img/logo/srikrung-logo.svg");
+}
