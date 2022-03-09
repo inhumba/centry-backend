@@ -4,17 +4,6 @@ nav.navbar.navbar-top.navbar-expand.navbar-light.bg-lighter.border-bottom
 	.container-fluid
 		#navbarSupportedContent.collapse.navbar-collapse
 
-			// Search form
-			form#navbar-search-main.navbar-search.navbar-search-light.form-inline.mr-sm-3
-				.form-group.mb-0
-					.input-group.input-group-alternative.input-group-merge
-						.input-group-prepend
-							span.input-group-text
-								i.fas.fa-search
-						label.sr-only(for="search") ค้นหา
-						input#search.form-control(placeholder="ค้นหา", type="text")
-				button.close(type="button", data-action="search-close", data-target="#navbar-search-main", aria-label="Close"): span(aria-hidden="true") ×
-
 			// Navbar links
 			ul.navbar-nav.align-items-center.ml-md-auto
 				// Sidenav toggler
@@ -24,59 +13,6 @@ nav.navbar.navbar-top.navbar-expand.navbar-light.bg-lighter.border-bottom
 							i.sidenav-toggler-line
 							i.sidenav-toggler-line
 							i.sidenav-toggler-line
-
-				// Notification
-				li.nav-item.dropdown
-					a.nav-link(href="#", title="แจ้งเตือน", role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false"): i.fad.fa-bell
-
-					// Dropdown header
-					.dropdown-menu.dropdown-menu-xl.dropdown-menu-right.py-0.overflow-hidden
-						.px-3.py-3
-							h6.text-sm.text-muted.m-0 คุณมี <strong class="text-primary">3</strong> การแจ้งเตือน
-
-
-						// List group
-						.list-group.list-group-flush
-							|
-							|
-							a.list-group-item.list-group-item-action(href="#", title="")
-								.row.align-items-center
-									.col-auto
-										img.avatar.rounded-circle(alt="", src="../../uploads/team-1.jpg")
-									.col.ml--2
-										.d-flex.justify-content-between.align-items-center
-											div
-												h4.mb-0.text-sm ปฐมพงศ์
-											.text-right.text-muted <small>2 hrs ago</small>
-										p.text-sm.mb-0 Let's meet at Starbucks at 11:30. Wdyt?
-							|
-							|
-							a.list-group-item.list-group-item-action(href="#", title="")
-								.row.align-items-center
-									.col-auto
-										img.avatar.rounded-circle(alt="", src="../../uploads/team-2.jpg")
-									.col.ml--2
-										.d-flex.justify-content-between.align-items-center
-											div
-												h4.mb-0.text-sm หนุ่ม
-											.text-right.text-muted <small>3 hrs ago</small>
-										p.text-sm.mb-0 A new issue has been reported for 724.
-							|
-							|
-							a.list-group-item.list-group-item-action(href="#", title="")
-								.row.align-items-center
-									.col-auto
-										img.avatar.rounded-circle(alt="", src="../../uploads/team-3.jpg")
-									.col.ml--2
-										.d-flex.justify-content-between.align-items-center
-											div
-												h4.mb-0.text-sm ฝ่ายบุคคล
-											.text-right.text-muted <small>6 ชั่วโมงที่แล้ว</small>
-										p.text-sm.mb-0 อย่าลืมอัปเดตข้อมูลส่วนตัวด้วยนะ
-							|
-							|
-							a.dropdown-item.text-center.text-primary.font-weight-bold.py-3(href="#", title="ดูการแจ้งเตือนทั้งหมด") ดูการแจ้งเตือนทั้งหมด
-
 
 						// Switcher
 						li.nav-item.dropdown
@@ -88,28 +24,34 @@ nav.navbar.navbar-top.navbar-expand.navbar-light.bg-lighter.border-bottom
 								.row.shortcuts.px-4
 									|
 									|
-									a.col-3.shortcut-item(href="#", title="Angular")
+									a.col-3.shortcut-item(href="#", title="Service 1")
 										span.shortcut-media.avatar.rounded-circle
-											i.fab.fa-angular
-										small Angular
+											img(alt="Service 1", src="../../uploads/angular.jpg")
+										small Service 1
 									|
 									|
-									a.col-3.shortcut-item(href="#", title="Bootstrap")
+									a.col-3.shortcut-item(href="#", title="Service 2")
 										span.shortcut-media.avatar.rounded-circle
-											i.fab.fa-bootstrap
-										small Bootstrap
+											img(alt="Service 2", src="../../uploads/bootstrap.jpg")
+										small Service 2
 									|
 									|
-									a.col-3.shortcut-item(href="#", title="Codepen")
+									a.col-3.shortcut-item(href="#", title="Service 3")
 										span.shortcut-media.avatar.rounded-circle
-											i.fab.fa-codepen
-										small Codepen
+											img(alt="Service 3", src="../../uploads/react.jpg")
+										small Service 3
 									|
 									|
-									a.col-3.shortcut-item(href="#", title="Github")
+									a.col-3.shortcut-item(href="#", title="Service 4")
 										span.shortcut-media.avatar.rounded-circle
-											i.fab.fa-github-alt
-										small Github
+											img(alt="Service 4", src="../../uploads/sketch.jpg")
+										small Service 4
+									|
+									|
+									a.col-3.shortcut-item(href="#", title="Service 5")
+										span.shortcut-media.avatar.rounded-circle
+											img(alt="Service 5", src="../../uploads/vue.jpg")
+										small Service 5
 
 
 			// Profile user
@@ -120,7 +62,7 @@ nav.navbar.navbar-top.navbar-expand.navbar-light.bg-lighter.border-bottom
 					a.nav-link.pr-0(href="#", title="", role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
 						.media.align-items-center
 							span.avatar.avatar-sm.rounded-circle
-								img(alt="", src="../../uploads/team-1.jpg")
+								img(alt="", src="../../uploads/user.jpg")
 							.media-body.ml-2.d-none.d-lg-block
 								span.mb-0.text-sm.font-weight-bold ปฐมพงศ์
 
@@ -129,24 +71,9 @@ nav.navbar.navbar-top.navbar-expand.navbar-light.bg-lighter.border-bottom
 							h5.text-overflow.m-0 สวัสดี !
 							|
 							|
-						a.dropdown-item(href="#", title="ประวัติส่วนตัว")
+						a.dropdown-item(href="#", title="ข้อมูลส่วนตัว")
 							i.fad.fa-user-circle
-							span ประวัติส่วนตัว
-						|
-						|
-						a.dropdown-item(href="#", title="ตั้งค่า")
-							i.fad.fa-cogs
-							span ตั้งค่า
-						|
-						|
-						a.dropdown-item(href="#", title="ตารางงาน")
-							i.fad.fa-table
-							span ตารางงาน
-						|
-						|
-						a.dropdown-item(href="#", title="ช่วยเหลือ")
-							i.fad.fa-question-circle
-							span ช่วยเหลือ
+							span ข้อมูลส่วนตัว
 						|
 						|
 						a.dropdown-item(href="#", title="ออกจากระบบ")

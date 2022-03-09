@@ -26,6 +26,10 @@ a.text-primary:focus {
     color: var(--primary-color);
 }
 
+.navbar {
+    min-height: 81px;
+}
+
 .sidenav-header {
     background-color: var(--primary-color);
 }
