@@ -1,0 +1,189 @@
+//-//- Use Master Template Base
+extends master/base.pug
+
+
+//-//- Page Title
+block title
+	title Users : CENTRY
+
+
+//-//- Custom Meta
+block custom-meta
+	meta(name="description", content="Users : CENTRY PDPA Backend")
+
+
+//-//- Custom Style
+block custom-style
+
+
+//-//- Body
+block body
+	- var bodyClass= 'users'; // body class
+	include master/bodyclass.pug
+
+
+	//-//- Include sidenav
+	include master/sidenav.pug
+
+
+	// Main content
+	main#panel.main-content
+
+
+		//-//- Include topbar
+		include master/topbar.pug
+
+
+		// Breadcrumb
+		.header.bg-gray-1.pb-6
+			.container-fluid
+				.header-body
+
+					.row.align-items-center.py-4
+						.col-lg-12
+
+							//- h2.h2.text-secondary.d-inline-block.mb-0 Dashboard
+
+							nav.d-none.d-md-inline-block(aria-label="breadcrumb")
+								ol.breadcrumb.breadcrumb-links.breadcrumb-light
+									li.breadcrumb-item
+										a(href="dashboard.html", title="กลับไปหน้า Dashboard"): i.fad.fa-home-lg-alt
+									li.breadcrumb-item.active(aria-current="page") Users
+
+
+		// Content area
+		.container-fluid.mt--6
+			|
+			|
+			|
+			|
+
+			// ========================= Page content ===============================
+
+			.row
+				.col
+					.card
+						.card-header.border-0
+							h3.mb-0 ผู้ใช้งานระบบ
+						.table-responsive
+							div
+								table.table.align-items-center
+									thead.thead-light
+										tr
+											th(scope='col') Username
+											th.sort(scope='col' data-sort='firstname') Firstname
+											th.sort(scope='col' data-sort='lastname') Lastname
+											th.sort(scope='col' data-sort='company') Company
+											th.sort(scope='col' data-sort='role') Role
+											th.sort(scope='col' data-sort='status') Status
+											th(scope='col')
+									tbody.list
+										tr
+											th(scope='row')
+												.media.align-items-center
+													.media-body
+														span.name.mb-0.text-sm inhumba
+											td.firstname ปฐมพงศ์
+											td.lastname สังคจิตต์
+											td.company ศรีกรุงโบรคเกอร์
+											td.role Super Admin
+											td.status
+												span.badge.badge-dot.mr-4
+													i.bg-success
+													span.status Active
+											td.text-right
+												.dropdown
+													a.btn.btn-sm.btn-icon-only.text-light(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+														i.fas.fa-ellipsis-v
+													.dropdown-menu.dropdown-menu-right.dropdown-menu-arrow
+														a.dropdown-item(href='#', title="Active") Active
+														a.dropdown-item(href='#', title="Inactive") Inactive
+														a.dropdown-item(href='#', title="View Profile") View Profile
+										tr
+											th(scope='row')
+												.media.align-items-center
+													.media-body
+														span.name.mb-0.text-sm Nhum
+											td.firstname Pathompong
+											td.lastname Sangkajit
+											td.company 724 Market
+											td.role Developer
+											td.status
+												span.badge.badge-dot.mr-4
+													i.bg-warning
+													span.status Inactive
+											td.text-right
+												.dropdown
+													a.btn.btn-sm.btn-icon-only.text-light(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+														i.fas.fa-ellipsis-v
+													.dropdown-menu.dropdown-menu-right.dropdown-menu-arrow
+														a.dropdown-item(href='#', title="Active") Active
+														a.dropdown-item(href='#', title="Inactive") Inactive
+														a.dropdown-item(href='#', title="View Profile") View Profile
+										tr
+											th(scope='row')
+												.media.align-items-center
+													.media-body
+														span.name.mb-0.text-sm inhumba
+											td.firstname ปฐมพงศ์
+											td.lastname สังคจิตต์
+											td.company ศรีกรุงโบรคเกอร์
+											td.role Super Admin
+											td.status
+												span.badge.badge-dot.mr-4
+													i.bg-success
+													span.status Active
+											td.text-right
+												.dropdown
+													a.btn.btn-sm.btn-icon-only.text-light(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+														i.fas.fa-ellipsis-v
+													.dropdown-menu.dropdown-menu-right.dropdown-menu-arrow
+														a.dropdown-item(href='#', title="Active") Active
+														a.dropdown-item(href='#', title="Inactive") Inactive
+														a.dropdown-item(href='#', title="View Profile") View Profile
+										tr
+											th(scope='row')
+												.media.align-items-center
+													.media-body
+														span.name.mb-0.text-sm Nhum
+											td.firstname Pathompong
+											td.lastname Sangkajit
+											td.company 724 Market
+											td.role Developer
+											td.status
+												span.badge.badge-dot.mr-4
+													i.bg-warning
+													span.status Inactive
+											td.text-right
+												.dropdown
+													a.btn.btn-sm.btn-icon-only.text-light(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+														i.fas.fa-ellipsis-v
+													.dropdown-menu.dropdown-menu-right.dropdown-menu-arrow
+														a.dropdown-item(href='#', title="Active") Active
+														a.dropdown-item(href='#', title="Inactive") Inactive
+														a.dropdown-item(href='#', title="View Profile") View Profile
+
+
+			// ======================== End Page content =============================
+
+			|
+			|
+			|
+			|
+			//-//- Include footer
+			include master/footer.pug
+
+
+	// Main Script
+	block script
+		include script/master-script.js
+
+
+	// Custom Script
+	block custom-script
+		|
+		//- <script src="../../assets/js/custom.js?v=1.0.0"></script>
+
+	|
+	|
+	</body>

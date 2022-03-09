@@ -9,6 +9,10 @@
 .dropright,
 .dropleft {
     display: inline-block;
+    &.show {
+        position: relative;
+        z-index: 5;
+    }
 }
 
 .dropdown-menu {
