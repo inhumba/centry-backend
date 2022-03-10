@@ -15,3 +15,12 @@
         }
     }
 }
+
+#panel {
+    > .container-fluid {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: calc(100vh - 162px);
+    }
+}
