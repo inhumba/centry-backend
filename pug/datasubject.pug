@@ -1,0 +1,154 @@
+//-//- Use Master Template Base
+extends master/base.pug
+
+
+//-//- Page Title
+block title
+	title Data Subject : CENTRY
+
+
+//-//- Custom Meta
+block custom-meta
+	meta(name="description", content="Data Subject : CENTRY PDPA Backend")
+
+
+//-//- Custom Style
+block custom-style
+
+
+//-//- Body
+block body
+	- var bodyClass= 'datasubject'; // body class
+	include master/bodyclass.pug
+
+
+	//-//- Include sidenav
+	include master/sidenav.pug
+
+
+	// Main content
+	main#panel.main-content
+
+
+		//-//- Include topbar
+		include master/topbar.pug
+
+
+		// Breadcrumb
+		.header.bg-gray-1.pb-6
+			.container-fluid
+				.header-body
+
+					.row.align-items-center.py-4
+						.col-lg-12
+
+							//- h2.h2.text-secondary.d-inline-block.mb-0 Dashboard
+
+							nav.d-none.d-md-inline-block(aria-label="breadcrumb")
+								ol.breadcrumb.breadcrumb-links.breadcrumb-light
+									li.breadcrumb-item
+										a(href="dashboard.html", title="กลับไปหน้า Dashboard"): i.fad.fa-home-lg-alt
+									li.breadcrumb-item
+										a(href="service.htm", title="Service") Service
+									li.breadcrumb-item.active(aria-current="page") Data Subject
+
+
+		// Content area
+		.container-fluid.mt--6
+			|
+			|
+			|
+			|
+
+			// ========================= Page content ===============================
+
+			.row
+				.col
+					.card
+						.card-header.border-0
+							h3.mb-0 ข้อมูลส่วนบุคคลของ PDPA-0001
+						.table-responsive
+							div
+								table.table.align-items-center
+									thead.thead-light
+										tr
+											th.text-center(scope='col') NO.
+											th.sort(scope='col' data-sort='data-subject-id') Data Subject ID
+											th.sort.text-center(scope='col' data-sort='general-sensitive') General/Sensitive
+											th.sort.text-center(scope='col' data-sort='cookies-analytics') Cookies/Analytics
+											th.sort.text-right(scope='col' data-sort='last-updated') Last Updated Date
+											th(scope='col')
+									tbody.list
+										tr
+											th.text-center(scope="row") 6
+											td.data-subject-id LCK-alpha-tango-0006
+											td.general-sensitive.text-center 10/2
+											td.cookies-analytics.text-center 2/3
+											td.last-updated.text-right 23-04-2022 15:03:32
+											td.text-right
+												a.btn.btn-sm.btn-primary(href="#", title="View Data") View Data
+										tr
+											th.text-center(scope="row") 5
+											td.data-subject-id LCK-alpha-tango-0005
+											td.general-sensitive.text-center 10/2
+											td.cookies-analytics.text-center 1/3
+											td.last-updated.text-right 20-04-2022 05:03:32
+											td.text-right
+												a.btn.btn-sm.btn-primary(href="#", title="View Data") View Data
+										tr
+											th.text-center(scope="row") 4
+											td.data-subject-id LCK-alpha-tango-0004
+											td.general-sensitive.text-center 10/2
+											td.cookies-analytics.text-center 1/0
+											td.last-updated.text-right 11-03-2022 12:33:09
+											td.text-right
+												a.btn.btn-sm.btn-primary(href="#", title="View Data") View Data
+										tr
+											th.text-center(scope="row") 3
+											td.data-subject-id LCK-alpha-tango-0003
+											td.general-sensitive.text-center 10/2
+											td.cookies-analytics.text-center 0/2
+											td.last-updated.text-right 23-04-2022 15:03:32
+											td.text-right
+												a.btn.btn-sm.btn-primary(href="#", title="View Data") View Data
+										tr
+											th.text-center(scope="row") 2
+											td.data-subject-id LCK-alpha-tango-0002
+											td.general-sensitive.text-center 10/2
+											td.cookies-analytics.text-center 1/1
+											td.last-updated.text-right 20-04-2022 05:03:32
+											td.text-right
+												a.btn.btn-sm.btn-primary(href="#", title="View Data") View Data
+										tr
+											th.text-center(scope="row") 1
+											td.data-subject-id LCK-alpha-tango-0001
+											td.general-sensitive.text-center 10/2
+											td.cookies-analytics.text-center 0/0
+											td.last-updated.text-right 11-03-2022 12:33:09
+											td.text-right
+												a.btn.btn-sm.btn-primary(href="#", title="View Data") View Data
+
+
+			// ======================== End Page content =============================
+
+			|
+			|
+			|
+			|
+			//-//- Include footer
+			include master/footer.pug
+
+
+	// Main Script
+	block script
+		include script/master-script.js
+
+
+	// Custom Script
+	block custom-script
+		|
+		//- <script src="../../assets/js/custom.js?v=1.0.0"></script>
+
+	|
+	|
+	</body>
