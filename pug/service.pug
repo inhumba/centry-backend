@@ -1,0 +1,151 @@
+//-//- Use Master Template Base
+extends master/base.pug
+
+
+//-//- Page Title
+block title
+	title Service : CENTRY
+
+
+//-//- Custom Meta
+block custom-meta
+	meta(name="description", content="Service : CENTRY PDPA Backend")
+
+
+//-//- Custom Style
+block custom-style
+
+
+//-//- Body
+block body
+	- var bodyClass= 'service'; // body class
+	include master/bodyclass.pug
+
+
+	//-//- Include sidenav
+	include master/sidenav.pug
+
+
+	// Main content
+	main#panel.main-content
+
+
+		//-//- Include topbar
+		include master/topbar.pug
+
+
+		// Breadcrumb
+		.header.bg-gray-1.pb-6
+			.container-fluid
+				.header-body
+
+					.row.align-items-center.py-4
+						.col-lg-12
+
+							//- h2.h2.text-secondary.d-inline-block.mb-0 Dashboard
+
+							nav.d-none.d-md-inline-block(aria-label="breadcrumb")
+								ol.breadcrumb.breadcrumb-links.breadcrumb-light
+									li.breadcrumb-item
+										a(href="dashboard.html", title="กลับไปหน้า Dashboard"): i.fad.fa-home-lg-alt
+									li.breadcrumb-item.active(aria-current="page") Service
+
+
+		// Content area
+		.container-fluid.mt--6
+			|
+			|
+			|
+			|
+
+			// ========================= Page content ===============================
+
+			.row
+				.col
+					.card
+						.card-header.border-0
+							h3.mb-0 บริการที่เปิดใช้งาน
+						.table-responsive
+							div
+								table.table.align-items-center
+									thead.thead-light
+										tr
+											th(scope='col')
+											th.sort(scope='col' data-sort='service') Service
+											th.sort.text-center(scope='col' data-sort='general') General
+											th.sort.text-center(scope='col' data-sort='sensitive') Sensitive
+											th.sort.text-center(scope='col' data-sort='cookies') Cookies
+											th.sort.text-center(scope='col' data-sort='analytics') Analytics
+											th.sort.text-right(scope='col' data-sort='last-records') Last Record Date
+											th(scope='col')
+									tbody.list
+										tr
+											th(scope='row')
+												a.avatar.rounded-circle(href="#", title="Service 1")
+													img(alt="Service 1", src="../../uploads/angular.jpg")
+											td.service
+												h4.mb-0
+													a(href="#", title="PDPA-0001") PDPA-0001
+												small Service 1
+											td.general.text-center 10
+											td.sensitive.text-center 2
+											td.cookies.text-center 3
+											td.analytics.text-center 2
+											td.last-records.text-right 23-04-2022 15:03:32
+											td.text-right
+												a.btn.btn-sm.btn-primary(href="#", title="View Data") View Data
+										tr
+											th(scope='row')
+												a.avatar.rounded-circle(href="#", title="Service 2")
+													img(alt="Service 2", src="../../uploads/vue.jpg")
+											td.service
+												h4.mb-0
+													a(href="#", title="PDPA-0002") PDPA-0002
+												small Service 2
+											td.general.text-center 24
+											td.sensitive.text-center 0
+											td.cookies.text-center 1
+											td.analytics.text-center 4
+											td.last-records.text-right 20-04-2022 05:03:32
+											td.text-right
+												a.btn.btn-sm.btn-primary(href="#", title="View Data") View Data
+										tr
+											th(scope='row')
+												a.avatar.rounded-circle(href="#", title="Service 3")
+													img(alt="Service 3", src="../../uploads/react.jpg")
+											td.service
+												h4.mb-0
+													a(href="#", title="PDPA-0003") PDPA-0003
+												small Service 3
+											td.general.text-center 32
+											td.sensitive.text-center 5
+											td.cookies.text-center 7
+											td.analytics.text-center 6
+											td.last-records.text-right 11-03-2022 12:33:09
+											td.text-right
+												a.btn.btn-sm.btn-primary(href="#", title="View Data") View Data
+
+
+			// ======================== End Page content =============================
+
+			|
+			|
+			|
+			|
+			//-//- Include footer
+			include master/footer.pug
+
+
+	// Main Script
+	block script
+		include script/master-script.js
+
+
+	// Custom Script
+	block custom-script
+		|
+		//- <script src="../../assets/js/custom.js?v=1.0.0"></script>
+
+	|
+	|
+	</body>
